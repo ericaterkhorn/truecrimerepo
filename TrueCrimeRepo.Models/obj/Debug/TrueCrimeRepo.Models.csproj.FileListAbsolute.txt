@@ -1,0 +1,6 @@
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\bin\Debug\TrueCrimeRepo.Models.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\bin\Debug\TrueCrimeRepo.Models.pdb
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\obj\Debug\TrueCrimeRepo.Models.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\obj\Debug\TrueCrimeRepo.Models.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\obj\Debug\TrueCrimeRepo.Models.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Models\obj\Debug\TrueCrimeRepo.Models.pdb
