@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace TrueCrimeRepo.Data
     {
         [Key]
         public int CrimedID { get; set; }
-        
+
         [Required]
         public Guid AuthorID { get; set; }
-        
+
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the title.")]
         [MaxLength(100, ErrorMessage = "The title is too long. Please re-enter the title.")]
@@ -45,9 +46,9 @@ namespace TrueCrimeRepo.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
-        //public virtual ICollection<Podcast> Podcasts { get; set; }
-        //public virtual ICollection<TVShow> TVShows { get; set; }
-       // public virtual ICollection<Book> Books { get; set; }
+        public virtual ICollection<Podcast> Podcasts { get; set; }
+        public virtual ICollection<TVShow> TVShows { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
 
     }
 }

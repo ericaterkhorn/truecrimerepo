@@ -32,9 +32,9 @@ namespace TrueCrimeRepo.Data
             return new ApplicationDbContext();
         }
         public DbSet<Crime> Crimes {get; set;}
-        //public DbSet<Podcast> Podcasts { get; set; }
-        //public DbSet<TVShow> TVShows { get; set; }
-        //public DbSet<Book> Books { get; set; }
+        public DbSet<Podcast> Podcasts { get; set; }
+        public DbSet<TVShow> TVShows { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

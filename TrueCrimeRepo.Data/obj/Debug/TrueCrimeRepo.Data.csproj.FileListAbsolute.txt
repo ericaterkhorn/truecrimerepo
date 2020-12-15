@@ -14,3 +14,8 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.pdb
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.InitialCreate.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\TrueCrimeRepo.Models.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\TrueCrimeRepo.Models.pdb
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.data.resources
