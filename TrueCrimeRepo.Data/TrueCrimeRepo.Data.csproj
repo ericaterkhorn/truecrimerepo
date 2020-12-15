@@ -65,6 +65,14 @@
     <Compile Include="Migrations\202012150216593_data.Designer.cs">
       <DependentUpon>202012150216593_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012150225520_podcast application user.cs" />
+    <Compile Include="Migrations\202012150225520_podcast application user.Designer.cs">
+      <DependentUpon>202012150225520_podcast application user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012150230028_application user book and tv.cs" />
+    <Compile Include="Migrations\202012150230028_application user book and tv.Designer.cs">
+      <DependentUpon>202012150230028_application user book and tv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012150216593_data.resx">
       <DependentUpon>202012150216593_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012150225520_podcast application user.resx">
+      <DependentUpon>202012150225520_podcast application user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012150230028_application user book and tv.resx">
+      <DependentUpon>202012150230028_application user book and tv.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

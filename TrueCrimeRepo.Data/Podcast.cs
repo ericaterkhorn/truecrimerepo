@@ -16,10 +16,14 @@ namespace TrueCrimeRepo.Data
         [ForeignKey(nameof(CrimeID))]
         public virtual Crime Crime { get; set; }
         public virtual int CrimeID { get; set; }
-        
+
         //[ForeignKey(nameof(ApplicationUser))]
         //public virtual ApplicationUser Author { get; set; }
         //public virtual int ApplicationUser { get; set; }
+
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set;  }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the podcast title.")]

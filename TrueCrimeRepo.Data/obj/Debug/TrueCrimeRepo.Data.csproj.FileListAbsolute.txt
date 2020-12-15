@@ -19,3 +19,5 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\TrueCrimeRepo.Models.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\TrueCrimeRepo.Models.pdb
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.data.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.podcastapplicationuser.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.applicationuserbookandtv.resources

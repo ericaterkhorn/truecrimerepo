@@ -21,6 +21,10 @@ namespace TrueCrimeRepo.Data
         //public virtual ApplicationUser Author { get; set; }
         //public virtual int ApplicationUser { get; set; }
 
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
+
         [Required]
         [MinLength(4, ErrorMessage = "Please enter the full name of the book.")]
         [MaxLength(100, ErrorMessage = "The title is too long. Please re-enter the book title.")]
