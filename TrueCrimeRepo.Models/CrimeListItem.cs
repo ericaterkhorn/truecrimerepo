@@ -14,7 +14,7 @@ namespace TrueCrimeRepo.Models
         public string Title { get; set; }
         [Display(Name = "Description of the crime")]
         public string Description { get; set; }
-        public DateTime Year { get; set; }
+        //public DateTime Year { get; set; }
         public string Perpetrator { get; set; }
         [Display(Name = "Location of the crime")]
         public string Location { get; set; }

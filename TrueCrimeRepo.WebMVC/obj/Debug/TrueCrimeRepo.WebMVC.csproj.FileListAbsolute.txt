@@ -113,3 +113,4 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRep
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.pdb
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\TrueCrimeRepo.Services.dll.config

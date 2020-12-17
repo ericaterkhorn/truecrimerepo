@@ -19,8 +19,8 @@ namespace TrueCrimeRepo.Models
         [MaxLength(2000, ErrorMessage = "Please limit your description to no more than 2,000 characters.")]
         public string Description { get; set; }
         
-        [Required]
-        public DateTime Year { get; set; }
+        //[Required]
+        //public DateTime Year { get; set; }
 
         [MinLength(4, ErrorMessage = "Please provide the full name (first and last) of the perpetrator.")]
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]

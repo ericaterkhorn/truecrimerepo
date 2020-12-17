@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrueCrimeRepo.Models;
+using TrueCrimeRepo.Services;
 
 namespace TrueCrimeRepo.WebMVC.Controllers
 {
@@ -13,7 +15,10 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         // GET: Crime
         public ActionResult Index()
         {
-            var model = new CrimeListItem[0];
+            //var model = new CrimeListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CrimeService(userId);
+            var model = service.GetCrimes();
             return View(model);
         }
 
@@ -25,11 +30,17 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CrimeCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CrimeService(userId);
+
+            service.CreateCrime(model);
+
+            return RedirectToAction("Index");
         }
     }
 }
