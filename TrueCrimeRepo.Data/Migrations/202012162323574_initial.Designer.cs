@@ -7,13 +7,13 @@ namespace TrueCrimeRepo.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class applicationuserbookandtv : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(applicationuserbookandtv));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012150230028_application user book and tv"; }
+            get { return "202012162323574_initial"; }
         }
         
         string IMigrationMetadata.Source

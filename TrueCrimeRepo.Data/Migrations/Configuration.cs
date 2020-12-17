@@ -10,7 +10,6 @@ namespace TrueCrimeRepo.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "TrueCrimeRepo.Data.ApplicationDbContext";
         }
 
         protected override void Seed(TrueCrimeRepo.Data.ApplicationDbContext context)

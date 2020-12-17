@@ -57,21 +57,9 @@
     <Compile Include="Book.cs" />
     <Compile Include="Crime.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012150017598_InitialCreate.cs" />
-    <Compile Include="Migrations\202012150017598_InitialCreate.Designer.cs">
-      <DependentUpon>202012150017598_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012150216593_data.cs" />
-    <Compile Include="Migrations\202012150216593_data.Designer.cs">
-      <DependentUpon>202012150216593_data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012150225520_podcast application user.cs" />
-    <Compile Include="Migrations\202012150225520_podcast application user.Designer.cs">
-      <DependentUpon>202012150225520_podcast application user.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012150230028_application user book and tv.cs" />
-    <Compile Include="Migrations\202012150230028_application user book and tv.Designer.cs">
-      <DependentUpon>202012150230028_application user book and tv.cs</DependentUpon>
+    <Compile Include="Migrations\202012162323574_initial.cs" />
+    <Compile Include="Migrations\202012162323574_initial.Designer.cs">
+      <DependentUpon>202012162323574_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
@@ -83,24 +71,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012150017598_InitialCreate.resx">
-      <DependentUpon>202012150017598_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012150216593_data.resx">
-      <DependentUpon>202012150216593_data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012150225520_podcast application user.resx">
-      <DependentUpon>202012150225520_podcast application user.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012150230028_application user book and tv.resx">
-      <DependentUpon>202012150230028_application user book and tv.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TrueCrimeRepo.Models\TrueCrimeRepo.Models.csproj">
       <Project>{3358627d-daed-4234-a9da-9bf0a7ff93e8}</Project>
       <Name>TrueCrimeRepo.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012162323574_initial.resx">
+      <DependentUpon>202012162323574_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

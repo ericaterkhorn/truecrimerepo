@@ -1,5 +1,3 @@
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csprojAssemblyReference.cache
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\TrueCrimeRepo.WebMVC.dll.config
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\TrueCrimeRepo.WebMVC.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\TrueCrimeRepo.WebMVC.pdb
@@ -110,6 +108,8 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\Microsoft.Owin.Sec
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.WebMVC\obj\Debug\TrueCrimeRepo.WebMVC.pdb
