@@ -50,7 +50,7 @@ namespace TrueCrimeRepo.Services
                             e =>
                                 new CrimeListItem
                                 {
-                                    //CrimeID = e.CrimeID,
+                                    CrimeID = e.CrimeID,
                                     Title = e.Title,
                                     Description = e.Description,
                                     //Year = e.Year,
