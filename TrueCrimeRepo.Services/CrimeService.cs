@@ -85,6 +85,25 @@ namespace TrueCrimeRepo.Services
                     };
             }
         }
+        public bool UpdateCrime(CrimeEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Crimes
+                        .Single(e => e.CrimeID == model.CrimeID && e.UserId == _userID);
+
+                entity.Title = model.Title;
+                entity.Description = model.Description;
+                entity.Perpetrator = model.Perpetrator;
+                entity.Location = model.Location;
+                entity.IsSolved = model.IsSolved;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
     }
 }

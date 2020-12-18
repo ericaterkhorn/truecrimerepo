@@ -51,6 +51,48 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
             return View(model);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateCrimeService();
+            var detail = service.GetCrimeById(id);
+            var model =
+                new CrimeEdit
+                {
+                    CrimeID = detail.CrimeID,
+                    Title = detail.Title,
+                    Description = detail.Description,
+                    Perpetrator = detail.Perpetrator,
+                    Location = detail.Location,
+                    IsSolved = detail.IsSolved
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, CrimeEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.CrimeID != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateCrimeService();
+
+            if (service.UpdateCrime(model))
+            {
+                TempData["SaveResult"] = "Your crime was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your crime could not be updated.");
+            return View(model);
+        }
+
         private CrimeService CreateCrimeService()
         {
             var userID = User.Identity.GetUserId();
