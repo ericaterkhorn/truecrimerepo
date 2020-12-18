@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Data
     public class Crime
     {
         [Key]
-        public int CrimedID { get; set; }
+        public int CrimeID { get; set; }
 
         [Required]
         public string UserId { get; set; }
@@ -32,8 +32,8 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Description of the crime")]
         public string Description { get; set; }
         
-        [Required]
-        public DateTime Year { get; set; }
+        //[Required]
+        //public DateTime Year { get; set; }
         
         [MinLength(4, ErrorMessage = "Please provide the full name (first and last) of the perpetrator.")]
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]

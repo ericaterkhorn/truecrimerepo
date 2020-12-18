@@ -3,7 +3,7 @@ namespace TrueCrimeRepo.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class fixcrimeidmisspell : DbMigration
     {
         public override void Up()
         {
@@ -28,7 +28,7 @@ namespace TrueCrimeRepo.Data.Migrations
                 "dbo.Crime",
                 c => new
                     {
-                        CrimedID = c.Int(nullable: false, identity: true),
+                        CrimeID = c.Int(nullable: false, identity: true),
                         UserId = c.String(nullable: false, maxLength: 128),
                         Title = c.String(nullable: false, maxLength: 100),
                         Description = c.String(nullable: false, maxLength: 2000),
@@ -39,7 +39,7 @@ namespace TrueCrimeRepo.Data.Migrations
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ModifiedUtc = c.DateTimeOffset(precision: 7),
                     })
-                .PrimaryKey(t => t.CrimedID)
+                .PrimaryKey(t => t.CrimeID)
                 .ForeignKey("dbo.ApplicationUser", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId);
             

@@ -16,5 +16,6 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.pdb
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.initial.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.fixcrimeidmisspell.resources
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.removingyear.resources
