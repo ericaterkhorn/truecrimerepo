@@ -44,7 +44,13 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
 
         }
+        public ActionResult Details(int id)
+        {
+            var svc = CreateCrimeService();
+            var model = svc.GetCrimeById(id);
 
+            return View(model);
+        }
         private CrimeService CreateCrimeService()
         {
             var userID = User.Identity.GetUserId();

@@ -64,6 +64,27 @@ namespace TrueCrimeRepo.Services
                 return query.ToArray();
             }
         }
+        public CrimeDetail GetCrimeById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Crimes
+                        .Single(e => e.CrimeID == id && e.UserId == _userID);
+                return
+                    new CrimeDetail
+                    {
+                        CrimeID = entity.CrimeID,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        //Year = entity.Year,
+                        Perpetrator = entity.Perpetrator,
+                        Location = entity.Location,
+                        IsSolved = entity.IsSolved,
+                    };
+            }
+        }
 
     }
 }

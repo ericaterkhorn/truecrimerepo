@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrimeCreate.cs" />
+    <Compile Include="CrimeDetail.cs" />
     <Compile Include="CrimeListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
