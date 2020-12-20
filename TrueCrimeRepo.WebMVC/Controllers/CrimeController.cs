@@ -92,6 +92,28 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             ModelState.AddModelError("", "Your crime could not be updated.");
             return View(model);
         }
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateCrimeService();
+            var model = svc.GetCrimeById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCrime(int id)
+        {
+            var service = CreateCrimeService();
+
+            service.DeleteCrime(id);
+
+            TempData["SaveResult"] = "Your crime was deleted";
+
+            return RedirectToAction("Index");
+        }
 
         private CrimeService CreateCrimeService()
         {

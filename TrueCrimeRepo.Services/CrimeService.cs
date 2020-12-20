@@ -104,6 +104,20 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteCrime(int crimeID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Crimes
+                        .Single(e => e.CrimeID == crimeID && e.UserId == _userID);
+
+                ctx.Crimes.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
     }
 }
