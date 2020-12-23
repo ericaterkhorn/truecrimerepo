@@ -20,7 +20,7 @@ namespace TrueCrimeRepo.Models
         public string Location { get; set; }
         [Display(Name = "Is the crime solved?")]
         public bool IsSolved { get; set; }
-        
+
         //public virtual ICollection<Podcast> Podcasts { get; set; }
         //[Display(Name = "TV Shows and Documentaries")]
         //public virtual ICollection<TVShow> TVShows { get; set; }
