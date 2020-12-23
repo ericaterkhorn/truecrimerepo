@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrueCrimeRepo.Models;
+using TrueCrimeRepo.Services;
 
 namespace TrueCrimeRepo.WebMVC.Controllers
 {
@@ -13,7 +15,9 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         // GET: Podcast
         public ActionResult Index()
         {
-            var model = new PodcastListItem[0];
+            var userID = User.Identity.GetUserId();
+            var service = new PodcastService(userID);
+            var model = service.GetPodcasts();
             return View(model);
         }
 
@@ -26,11 +30,34 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PodcastCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = CreatePodcastService();
+
+            if (service.CreatePodcast(model))
+            {
+                TempData["SaveResult"] = "Your podcast was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Podcast could not be created.");
+
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreatePodcastService();
+            var model = svc.GetPodcastByID(id);
+
+            return View(model);
+        }
+
+        private PodcastService CreatePodcastService()
+        {
+            var userID = User.Identity.GetUserId();
+            var service = new PodcastService(userID);
+            return service;
         }
     }
 }

@@ -47,6 +47,7 @@
     <Compile Include="CrimeEdit.cs" />
     <Compile Include="CrimeListItem.cs" />
     <Compile Include="PodcastCreate.cs" />
+    <Compile Include="PodcastDetail.cs" />
     <Compile Include="PodcastListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
