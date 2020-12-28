@@ -172,6 +172,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PodcastController.cs" />
+    <Compile Include="Controllers\TVShowController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,6 +190,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Black and White Photo True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -245,6 +247,9 @@
     <Content Include="Views\Podcast\Index.cshtml" />
     <Content Include="Views\Podcast\Create.cshtml" />
     <Content Include="Views\Podcast\Details.cshtml" />
+    <Content Include="Views\Podcast\Edit.cshtml" />
+    <Content Include="Views\TVShow\Index.cshtml" />
+    <Content Include="Views\TVShow\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,12 +13,8 @@ namespace TrueCrimeRepo.Models
         public int PodcastID { get; set; }
 
         public string ApplicationUser { get; set; }
-        public int CrimeID { get; set; }
 
-        //[ForeignKey(nameof(CrimeID))]
-        //public virtual Crime Crime { get; set; }
-        //public virtual int CrimeID { get; set; }
-
+        public string Crime { get; set; }
 
         //[ForeignKey(nameof(ApplicationUser))]
         //public virtual ApplicationUser Author { get; set; }
@@ -39,8 +35,8 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Website URL")]
         public string WebsiteUrl { get; set; }
 
-        public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        //public DateTimeOffset CreatedUtc { get; set; }
+        //public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
 

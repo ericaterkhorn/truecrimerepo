@@ -57,6 +57,7 @@
     <Compile Include="CrimeService.cs" />
     <Compile Include="PodcastService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TVShowService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrueCrimeRepo.Data\TrueCrimeRepo.Data.csproj">

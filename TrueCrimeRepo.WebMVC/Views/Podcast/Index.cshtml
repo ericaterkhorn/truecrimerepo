@@ -27,9 +27,9 @@
         <th>
             @Html.DisplayNameFor(model => model.ApplicationUser)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.CrimeID)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -39,12 +39,12 @@
         <th>
             @Html.DisplayNameFor(model => model.WebsiteUrl)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -57,9 +57,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ApplicationUser)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.CrimeID)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -69,12 +69,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.WebsiteUrl)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ModifiedUtc)
-            </td>
+            </td>*@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.PodcastID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.PodcastID }) |

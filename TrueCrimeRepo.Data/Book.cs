@@ -13,14 +13,8 @@ namespace TrueCrimeRepo.Data
         [Key]
         public int BookID { get; set; }
 
-        [ForeignKey(nameof(CrimeID))]
         public virtual Crime Crime { get; set; }
-        public virtual int CrimeID { get; set; }
 
-        //[ForeignKey(nameof(ApplicationUser))]
-        //public virtual ApplicationUser Author { get; set; }
-        //public virtual int ApplicationUser { get; set; }
-        
         public string UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual ApplicationUser User { get; set; }

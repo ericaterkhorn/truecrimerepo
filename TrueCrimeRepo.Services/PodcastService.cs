@@ -27,7 +27,8 @@ namespace TrueCrimeRepo.Services
                     Title = model.Title,
                     Description = model.Description,
                     WebsiteUrl = model.WebsiteUrl,
-                    CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now,
+               
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -36,7 +37,6 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
 
-            
         }
 
         public IEnumerable<PodcastListItem> GetPodcasts()
@@ -55,7 +55,7 @@ namespace TrueCrimeRepo.Services
                                     Title = e.Title,
                                     Description = e.Description,
                                     WebsiteUrl = e.WebsiteUrl,
-                                    CreatedUtc = e.CreatedUtc
+                                    
                                 }
                         );
 
@@ -77,10 +77,27 @@ namespace TrueCrimeRepo.Services
                         PodcastID = entity.PodcastID,
                         Title = entity.Title,
                         Description = entity.Description,
-                        WebsiteURL = entity.WebsiteUrl,
+                        WebsiteUrl = entity.WebsiteUrl,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
+            }
+        }
+
+        public bool UpdatePodcast(PodcastEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Podcasts
+                        .Single(e => e.PodcastID == model.PodcastID && e.UserId == _userID);
+
+                entity.Title = model.Title;
+                entity.Description = model.Description;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

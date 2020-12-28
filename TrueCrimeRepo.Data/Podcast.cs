@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace TrueCrimeRepo.Data
 {
@@ -13,18 +14,17 @@ namespace TrueCrimeRepo.Data
         [Key]
         public int PodcastID { get; set; }
         
-        [ForeignKey(nameof(CrimeID))]
-        public virtual Crime Crime { get; set; }
-        public virtual int CrimeID { get; set; }
+        //[ForeignKey("CrimeID")]
+        //public virtual Crime Crime { get; set; }
+        //public virtual int CrimeID { get; set; }
 
-        //[ForeignKey(nameof(ApplicationUser))]
-        //public virtual ApplicationUser Author { get; set; }
-        //public virtual int ApplicationUser { get; set; }
+        //public virtual Crime Crime { get; set; }
 
-        
+        //public ICollection<SelectListItem> Crime { get; set; }
+
         public string UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set;  }
+        public virtual ApplicationUser User { get; set; }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the podcast title.")]

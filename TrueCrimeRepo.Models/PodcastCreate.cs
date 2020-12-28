@@ -5,14 +5,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace TrueCrimeRepo.Models
 {
     public class PodcastCreate
     {
-        //[ForeignKey(nameof(CrimeID))]
+        //[ForeignKey("CrimeID")]
         //public virtual Crime Crime { get; set; }
         //public virtual int CrimeID { get; set; }
+        [Required]
+        [Display(Name = "True Crime")]
+        public string SelectedTrueCrime { get; set; }
+        public ICollection<SelectListItem> Crime { get; set; }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the podcast title.")]
@@ -30,9 +35,6 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Website URL")]
         public string WebsiteUrl { get; set; }
 
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
 }

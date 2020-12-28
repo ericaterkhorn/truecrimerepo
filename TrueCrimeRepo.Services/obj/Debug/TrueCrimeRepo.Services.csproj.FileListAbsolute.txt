@@ -19,3 +19,14 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\EntityFram
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csproj.CopyComplete
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.Mvc.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.Razor.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.Mvc.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.Razor.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\System.Web.WebPages.Deployment.xml
