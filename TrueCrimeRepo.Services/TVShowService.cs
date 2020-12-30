@@ -8,7 +8,7 @@ using TrueCrimeRepo.Models;
 
 namespace TrueCrimeRepo.Services
 {
-    class TVShowService
+    public class TVShowService
     {
         private readonly string _userID;
         private ApplicationUser _user;
@@ -24,6 +24,7 @@ namespace TrueCrimeRepo.Services
                 new TVShow()
                 {
                     UserId = _userID,
+                    CrimeID = model.CrimeID,
                     Title = model.Title,
                     Description = model.Description,
                     Channel_OnlineStream = model.Channel_OnlineStream,
@@ -50,6 +51,7 @@ namespace TrueCrimeRepo.Services
                                 new TVShowListItem
                                 {
                                     TVShowID = e.TVShowID,
+                                    CrimeID = e.CrimeID,
                                     Title = e.Title,
                                     Description = e.Description,
                                     Channel_OnlineStream = e.Channel_OnlineStream

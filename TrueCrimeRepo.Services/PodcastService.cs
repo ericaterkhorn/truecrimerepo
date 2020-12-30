@@ -24,6 +24,7 @@ namespace TrueCrimeRepo.Services
                 new Podcast()
                 {
                     UserId = _userID,
+                    CrimeID = model.CrimeID,
                     Title = model.Title,
                     Description = model.Description,
                     WebsiteUrl = model.WebsiteUrl,
@@ -52,6 +53,7 @@ namespace TrueCrimeRepo.Services
                                 new PodcastListItem
                                 {
                                     PodcastID = e.PodcastID,
+                                    CrimeID = e.CrimeID,
                                     Title = e.Title,
                                     Description = e.Description,
                                     WebsiteUrl = e.WebsiteUrl,
@@ -75,6 +77,7 @@ namespace TrueCrimeRepo.Services
                     new PodcastDetail
                     {
                         PodcastID = entity.PodcastID,
+                        CrimeID = entity.CrimeID,
                         Title = entity.Title,
                         Description = entity.Description,
                         WebsiteUrl = entity.WebsiteUrl,

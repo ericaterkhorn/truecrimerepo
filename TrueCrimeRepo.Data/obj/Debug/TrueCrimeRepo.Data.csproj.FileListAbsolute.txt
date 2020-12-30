@@ -29,3 +29,6 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.Raz
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.Razor.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.moreicollectionwork.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.dropdownlistwork.resources

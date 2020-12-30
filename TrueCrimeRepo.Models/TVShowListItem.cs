@@ -10,6 +10,7 @@ namespace TrueCrimeRepo.Models
     public class TVShowListItem
     {
         public int TVShowID { get; set; }
+        public int CrimeID { get; set; }
 
         //public string ApplicationUser { get; set; }
 

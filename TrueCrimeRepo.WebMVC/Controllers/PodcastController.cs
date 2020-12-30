@@ -22,11 +22,21 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        //public ActionResult Create()
+        //{
+        //    var model = new PodcastCreate();
+        //    model.Crimes = _db.CrimeID.Select(p => new SelectListItem)
+        //    {
+        //        Title = p.Title,
+        //        Value = p.CrimeID.ToString();
+        //    }
+        //    return View();
+        //}
+
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]

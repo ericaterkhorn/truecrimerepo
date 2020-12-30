@@ -11,16 +11,13 @@ namespace TrueCrimeRepo.Data
 {
     public class Podcast
     {
+       
         [Key]
         public int PodcastID { get; set; }
-        
-        //[ForeignKey("CrimeID")]
-        //public virtual Crime Crime { get; set; }
-        //public virtual int CrimeID { get; set; }
 
-        //public virtual Crime Crime { get; set; }
-
-        //public ICollection<SelectListItem> Crime { get; set; }
+        [ForeignKey("CrimeID")]
+        public virtual Crime Crime { get; set; }
+        public virtual int CrimeID { get; set; }
 
         public string UserId { get; set; }
         [ForeignKey("UserId")]
@@ -45,6 +42,9 @@ namespace TrueCrimeRepo.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
-    
+
+        public IEnumerable<SelectListItem> Crimes { get; set; }
+
     }
+
 }

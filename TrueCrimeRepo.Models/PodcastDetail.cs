@@ -12,9 +12,7 @@ namespace TrueCrimeRepo.Models
     {
         public int PodcastID { get; set; }
 
-        //[ForeignKey(nameof(CrimeID))]
-        //public virtual Crime Crime { get; set; }
-        //public virtual int CrimeID { get; set; }
+        public int CrimeID { get; set; }
      
         [Display(Name = "Podcast Title")]
         public string Title { get; set; }

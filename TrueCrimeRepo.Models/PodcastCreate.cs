@@ -11,13 +11,12 @@ namespace TrueCrimeRepo.Models
 {
     public class PodcastCreate
     {
-        //[ForeignKey("CrimeID")]
-        //public virtual Crime Crime { get; set; }
-        //public virtual int CrimeID { get; set; }
+
         [Required]
         [Display(Name = "True Crime")]
-        public string SelectedTrueCrime { get; set; }
-        public ICollection<SelectListItem> Crime { get; set; }
+        //public string SelectedTrueCrime { get; set; }
+        public IEnumerable<SelectListItem> Crimes { get; set; }
+        public int CrimeID { get; set; }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the podcast title.")]

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
@@ -11,6 +12,9 @@ namespace TrueCrimeRepo.Data
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+
+        
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -35,6 +39,10 @@ namespace TrueCrimeRepo.Data
         public DbSet<Podcast> Podcasts { get; set; }
         public DbSet<TVShow> TVShows { get; set; }
         public DbSet<Book> Books { get; set; }
+        public virtual ICollection<Podcast> CrimePodcasts { get; set; }
+        public virtual ICollection<TVShow> CrimeTVShows { get; set; }
+        public virtual ICollection<Book> CrimeBooks { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
