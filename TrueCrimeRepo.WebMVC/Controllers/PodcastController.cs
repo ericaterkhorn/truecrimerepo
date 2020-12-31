@@ -13,6 +13,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     [Authorize]
     public class PodcastController : Controller
     {
+        private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Podcast
         public ActionResult Index()
         {
@@ -24,25 +25,24 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
         //public ActionResult Create()
         //{
-        //    var model = new PodcastCreate();
-        //    model.Crimes = _db.CrimeID.Select(p => new SelectListItem)
-        //    {
-        //        Title = p.Title,
-        //        Value = p.CrimeID.ToString();
-        //    }
         //    return View();
         //}
 
         public ActionResult Create()
         {
-            return View();
+            var model = new PodcastCreate();
+            model.Crimes = _db.Crimes.Select(p => new SelectListItem
+            {
+                Text = p.Title,
+                Value = p.CrimeID.ToString()
+            });
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(PodcastCreate model)
         {
-
             if (!ModelState.IsValid) return View(model);
 
             var service = CreatePodcastService();
@@ -54,24 +54,10 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             };
 
             ModelState.AddModelError("", "Podcast could not be created.");
-
+            
             return View(model);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create(PodcastCreate model) 
-        //{
-        //    var service = CreatePodcastService();
-
-        //     var create = Crime.Select(p => new SelectListItem
-        //     {
-        //         Text = p.Title,
-        //         Value = p.CrimeID.ToString()
-        //     });
-
-        //    return View(model);
-        //}
         public ActionResult Details(int id)
         {
             var svc = CreatePodcastService();

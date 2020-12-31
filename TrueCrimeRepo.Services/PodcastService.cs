@@ -28,8 +28,7 @@ namespace TrueCrimeRepo.Services
                     Title = model.Title,
                     Description = model.Description,
                     WebsiteUrl = model.WebsiteUrl,
-                    CreatedUtc = DateTimeOffset.Now,
-               
+                    CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -56,8 +55,7 @@ namespace TrueCrimeRepo.Services
                                     CrimeID = e.CrimeID,
                                     Title = e.Title,
                                     Description = e.Description,
-                                    WebsiteUrl = e.WebsiteUrl,
-                                    
+                                    WebsiteUrl = e.WebsiteUrl
                                 }
                         );
 

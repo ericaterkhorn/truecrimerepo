@@ -81,5 +81,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrueCrimeRepo.Data\TrueCrimeRepo.Data.csproj">
+      <Project>{4a3498b6-3600-4567-86ec-192d66591665}</Project>
+      <Name>TrueCrimeRepo.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

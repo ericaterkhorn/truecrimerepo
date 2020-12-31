@@ -12,12 +12,12 @@ namespace TrueCrimeRepo.Data
 {
     public class Crime
     {
-        public Crime()
-        {
-            this.CrimePodcasts = new HashSet<Podcast>();
-            this.CrimeTVShows = new HashSet<TVShow>();
-            this.CrimeBooks = new HashSet<Book>();
-        }
+        //public Crime()
+        //{
+        //    this.CrimePodcasts = new HashSet<Podcast>();
+        //    this.CrimeTVShows = new HashSet<TVShow>();
+        //    this.CrimeBooks = new HashSet<Book>();
+        //}
        
         [Key]
         public int CrimeID { get; set; }
@@ -58,9 +58,12 @@ namespace TrueCrimeRepo.Data
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-        public virtual ICollection<Podcast> CrimePodcasts { get; set; }
-        public virtual ICollection<TVShow> CrimeTVShows { get; set; }
-        public virtual ICollection<Book> CrimeBooks { get; set; }
+        public virtual ICollection<Podcast> Podcasts { get; set; }
+        public virtual ICollection<TVShow> TVShows { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
+
+        public IEnumerable<SelectListItem> Crimes { get; set; }
+        
 
         //public Crime()
         //{

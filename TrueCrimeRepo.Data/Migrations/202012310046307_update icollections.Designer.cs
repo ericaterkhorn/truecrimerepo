@@ -7,13 +7,13 @@ namespace TrueCrimeRepo.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class moreicollectionwork : IMigrationMetadata
+    public sealed partial class updateicollections : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(moreicollectionwork));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateicollections));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012300344259_more icollection work"; }
+            get { return "202012310046307_update icollections"; }
         }
         
         string IMigrationMetadata.Source

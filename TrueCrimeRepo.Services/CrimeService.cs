@@ -57,9 +57,9 @@ namespace TrueCrimeRepo.Services
                                     Perpetrator = e.Perpetrator,
                                     Location = e.Location,
                                     IsSolved = e.IsSolved,
-                                    //Podcast = e.Podcast,
-                                    //TVShow = e.TVShows,
-                                    //Book = e.Books,
+                                    Podcasts = e.Podcasts,
+                                    TVShows = e.TVShows,
+                                    Books = e.Books,
                                 }
                         );
 
@@ -84,9 +84,9 @@ namespace TrueCrimeRepo.Services
                         Perpetrator = entity.Perpetrator,
                         Location = entity.Location,
                         IsSolved = entity.IsSolved,
-                        //Podcast = entity.Podcasts,
-                        //TVShow = entity.TVShows,
-                        //Book = entity.Books
+                        Podcasts = entity.Podcasts,
+                        TVShows = entity.TVShows,
+                        Books = entity.Books
                     };
             }
         }

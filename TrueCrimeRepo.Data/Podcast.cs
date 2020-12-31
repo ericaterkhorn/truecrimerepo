@@ -43,7 +43,7 @@ namespace TrueCrimeRepo.Data
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-        public IEnumerable<SelectListItem> Crimes { get; set; }
+       
 
     }
 

@@ -9,32 +9,26 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-}    
+}
 <div class="form-horizontal">
-    <h4>PodcastCreate</h4>
+    <h4></h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @*@Html.LabelFor(x => Model.SelectedTrueCrime, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-5">
-            @Html.DropDownListFor(x => Model.SelectedTrueCrime, new SelectList(Model.Crime, "Value", "Text"), htmlAttributes: new { @class = "form-control", id = "Crime" })
-            @Html.ValidationMessageFor(x => x.SelectedTrueCrime, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
+
     <div class="form-group">
         @Html.LabelFor(model => Model.Crimes, "CrimeID", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-5">
-            @Html.DropDownList("CrimeID", Model.Crimes, htmlAttributes: new { @class = "form-control"})
-            @Html.ValidationMessageFor(model => model.Crimes,"", new { @class = "text-danger" })
+            @Html.DropDownList("CrimeID", Model.Crimes, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Crimes, "", new { @class = "text-danger" })
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.CrimeID, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.CrimeID, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.CrimeID, "", new { @class = "text-danger" })
-        </div>
-    </div>
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.CrimeID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CrimeID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CrimeID, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -82,8 +76,12 @@
         </div>
     </div>
 </div>
-}
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

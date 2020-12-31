@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Data;
 
 namespace TrueCrimeRepo.Models
 {
@@ -21,11 +22,11 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Is the crime solved?")]
         public bool IsSolved { get; set; }
 
-        
-        //public virtual ICollection<Podcast> CrimePodcasts { get; set; }
-        //[Display(Name = "TV Shows and Documentaries")]
-        //public virtual ICollection<TVShow> TVShows { get; set; }
-        //public virtual ICollection<Book> Books { get; set; }
+
+        public virtual ICollection<Podcast> Podcasts { get; set; }
+        [Display(Name = "TV Shows and Documentaries")]
+        public virtual ICollection<TVShow> TVShows { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
 
     }
 }

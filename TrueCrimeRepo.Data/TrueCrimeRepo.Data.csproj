@@ -78,13 +78,9 @@
     <Compile Include="Book.cs" />
     <Compile Include="Crime.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012300344259_more icollection work.cs" />
-    <Compile Include="Migrations\202012300344259_more icollection work.Designer.cs">
-      <DependentUpon>202012300344259_more icollection work.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012300454150_dropdown list work.cs" />
-    <Compile Include="Migrations\202012300454150_dropdown list work.Designer.cs">
-      <DependentUpon>202012300454150_dropdown list work.cs</DependentUpon>
+    <Compile Include="Migrations\202012310046307_update icollections.cs" />
+    <Compile Include="Migrations\202012310046307_update icollections.Designer.cs">
+      <DependentUpon>202012310046307_update icollections.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
@@ -96,17 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrueCrimeRepo.Models\TrueCrimeRepo.Models.csproj">
-      <Project>{3358627d-daed-4234-a9da-9bf0a7ff93e8}</Project>
-      <Name>TrueCrimeRepo.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012300344259_more icollection work.resx">
-      <DependentUpon>202012300344259_more icollection work.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012300454150_dropdown list work.resx">
-      <DependentUpon>202012300454150_dropdown list work.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012310046307_update icollections.resx">
+      <DependentUpon>202012310046307_update icollections.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

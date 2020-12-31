@@ -64,7 +64,10 @@ namespace TrueCrimeRepo.WebMVC.Controllers
                     Description = detail.Description,
                     Perpetrator = detail.Perpetrator,
                     Location = detail.Location,
-                    IsSolved = detail.IsSolved
+                    IsSolved = detail.IsSolved,
+                    Podcasts = detail.Podcasts,
+                    TVShows = detail.TVShows,
+                    Books = detail.Books
                 };
             return View(model);
         }
