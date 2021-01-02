@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using TrueCrimeRepo.Data;
 
 namespace TrueCrimeRepo.Models
 {
     public class TVShowCreate
     {
-        [Required]
-        [Display(Name = "True Crime")]
-
-        public IEnumerable<SelectListItem> Crimes { get; set; }
+        [ForeignKey("Crime")]
         public int CrimeID { get; set; }
+        public virtual Crime Crime { get; set; }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the TV Show or Documentary title.")]

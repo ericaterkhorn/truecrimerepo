@@ -15,7 +15,13 @@
         <h4>TVShowCreate</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-       
+    <div class="form-group">
+        @Html.LabelFor(model => model.Crime, "CrimeID", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.CrimeID, new SelectList(ViewBag.Crimes, "CrimeID", "Title"), "Select Crime");
+            @Html.ValidationMessageFor(model => model.CrimeID, "", new { @class = "text-danger" })
+        </div>
+    </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })

@@ -25,6 +25,7 @@ namespace TrueCrimeRepo.Services
                 {
                     UserId = _userID,
                     CrimeID = model.CrimeID,
+                    Crime = model.Crime,
                     Title = model.Title,
                     Description = model.Description,
                     Channel_OnlineStream = model.Channel_OnlineStream,
@@ -60,6 +61,27 @@ namespace TrueCrimeRepo.Services
                         );
 
                 return query.ToArray();
+            }
+        }
+        public TVShowDetail GetTVShowByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TVShows
+                        .Single(e => e.TVShowID == id && e.UserId == _userID);
+                return
+                    new TVShowDetail
+                    {
+                        TVShowID = entity.TVShowID,
+                        CrimeID = entity.CrimeID,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        Channel_OnlineStream = entity.Channel_OnlineStream,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
             }
         }
     }
