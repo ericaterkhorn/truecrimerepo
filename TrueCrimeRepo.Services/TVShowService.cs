@@ -84,5 +84,22 @@ namespace TrueCrimeRepo.Services
                     };
             }
         }
+
+        public bool UpdateTVShow(TVShowEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TVShows
+                        .Single(e => e.TVShowID == model.TVShowID && e.UserId == _userID);
+
+                entity.Title = model.Title;
+                entity.Description = model.Description;
+                entity.Channel_OnlineStream = model.Channel_OnlineStream;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model TrueCrimeRepo.Models.PodcastEdit
+﻿@model TrueCrimeRepo.Models.TVShowEdit
 
 @{
     ViewBag.Title = "Edit";
@@ -12,17 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>PodcastEdit</h4>
+        <h4>TVShowEdit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.PodcastID)
-        <div class="form-group">
-            @Html.LabelFor(model => model.PodcastID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PodcastID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PodcastID, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.HiddenFor(model => model.TVShowID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -41,10 +34,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.WebsiteUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Channel_OnlineStream, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.WebsiteUrl, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.WebsiteUrl, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Channel_OnlineStream, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Channel_OnlineStream, "", new { @class = "text-danger" })
             </div>
         </div>
 

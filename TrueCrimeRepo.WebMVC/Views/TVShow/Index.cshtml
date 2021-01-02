@@ -52,9 +52,9 @@
                 @Html.DisplayFor(modelItem => item.Channel_OnlineStream)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new {id=item.TVShowID }) |
+                @Html.ActionLink("Details", "Details", new {id=item.TVShowID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.TVShowID })
             </td>
         </tr>
     }

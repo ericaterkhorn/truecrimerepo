@@ -63,6 +63,45 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit (int id)
+        {
+            var service = CreateTVShowService();
+            var detail = service.GetTVShowByID(id);
+            var model =
+                new TVShowEdit
+                {
+                    TVShowID = detail.TVShowID,
+                    Title = detail.Title,
+                    Description = detail.Description,
+                    Channel_OnlineStream = detail.Channel_OnlineStream
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, TVShowEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.TVShowID != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateTVShowService();
+
+            if (service.UpdateTVShow(model))
+            {
+                TempData["SaveResult"] = "Your TV Show was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your TV Show could not be updated.");
+            return View(model);
+        }
+
         private TVShowService CreateTVShowService()
         {
             var userID = User.Identity.GetUserId();
