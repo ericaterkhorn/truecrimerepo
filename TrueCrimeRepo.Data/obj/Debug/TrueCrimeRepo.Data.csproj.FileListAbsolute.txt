@@ -29,3 +29,4 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.Web
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.updateicollections.resources
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.foreignkey.resources

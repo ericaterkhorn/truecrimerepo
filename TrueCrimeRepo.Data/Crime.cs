@@ -62,7 +62,7 @@ namespace TrueCrimeRepo.Data
         public virtual ICollection<TVShow> TVShows { get; set; }
         public virtual ICollection<Book> Books { get; set; }
 
-        public IEnumerable<SelectListItem> Crimes { get; set; }
+        //public IEnumerable<SelectListItem> Crimes { get; set; }
         
 
         //public Crime()

@@ -25,6 +25,7 @@ namespace TrueCrimeRepo.Services
                 {
                     UserId = _userID,
                     CrimeID = model.CrimeID,
+                    Crime = model.Crime,
                     Title = model.Title,
                     Description = model.Description,
                     WebsiteUrl = model.WebsiteUrl,

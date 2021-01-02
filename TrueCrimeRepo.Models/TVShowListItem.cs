@@ -12,18 +12,8 @@ namespace TrueCrimeRepo.Models
         public int TVShowID { get; set; }
         public int CrimeID { get; set; }
 
-        //public string ApplicationUser { get; set; }
+        public string ApplicationUser { get; set; }
 
-        //public string Crime { get; set; }
-
-        //[ForeignKey(nameof(ApplicationUser))]
-        //public virtual ApplicationUser Author { get; set; }
-        //public virtual int ApplicationUser { get; set; }
-
-
-        //public string UserId { get; set; }
-        //[ForeignKey("UserId")]
-        //public virtual ApplicationUser User { get; set; }
 
         [Display(Name = "Name of TV Show or Documentary")]
         public string Title { get; set; }

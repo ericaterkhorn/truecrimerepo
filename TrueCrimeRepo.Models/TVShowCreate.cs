@@ -10,11 +10,12 @@ namespace TrueCrimeRepo.Models
 {
     public class TVShowCreate
     {
-        //[Required]
-        //[Display(Name = "True Crime")]
-        //public string SelectedTrueCrime { get; set; }
-        //public ICollection<SelectListItem> Crimes { get; set; }
+        [Required]
+        [Display(Name = "True Crime")]
+
+        public IEnumerable<SelectListItem> Crimes { get; set; }
         public int CrimeID { get; set; }
+
         [Required]
         [MinLength(4, ErrorMessage = "Please re-enter the full name of the TV Show or Documentary title.")]
         [MaxLength(100, ErrorMessage = "The title is too long. Please re-enter the TV Show or Documentary title.")]

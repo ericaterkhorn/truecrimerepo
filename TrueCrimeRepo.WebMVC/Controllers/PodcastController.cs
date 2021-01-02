@@ -13,7 +13,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     [Authorize]
     public class PodcastController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
+        //private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Podcast
         public ActionResult Index()
         {
@@ -30,13 +30,18 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
         public ActionResult Create()
         {
-            var model = new PodcastCreate();
-            model.Crimes = _db.Crimes.Select(p => new SelectListItem
-            {
-                Text = p.Title,
-                Value = p.CrimeID.ToString()
-            });
-            return View(model);
+            //var model = new PodcastCreate();
+            //model.Crime = _db.Crime.Select(p => new SelectListItem
+            //{
+            //    Text = p.Title,
+            //    Value = p.CrimeID.ToString()
+            //});
+            //return View(model);
+            var crimeServ = CreateCrimeService();
+            var getCrimes = crimeServ.GetCrimes();
+            ViewBag.Crimes = getCrimes.ToList();
+            return View();
+
         }
 
         [HttpPost]
@@ -109,6 +114,13 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         {
             var userID = User.Identity.GetUserId();
             var service = new PodcastService(userID);
+            return service;
+        }
+
+        private CrimeService CreateCrimeService()
+        {
+            var userID = User.Identity.GetUserId();
+            var service = new CrimeService(userID);
             return service;
         }
     }
