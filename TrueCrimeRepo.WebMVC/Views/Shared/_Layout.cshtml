@@ -34,6 +34,10 @@
                     {
                         <li>@Html.ActionLink("TVShows", "Index", "TVShow")</li>
                     }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Books", "Index", "Book")</li>
+                    }
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

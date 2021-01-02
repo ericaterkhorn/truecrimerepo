@@ -63,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookCreate.cs" />
+    <Compile Include="BookListItem.cs" />
     <Compile Include="CrimeCreate.cs" />
     <Compile Include="CrimeDetail.cs" />
     <Compile Include="CrimeEdit.cs" />

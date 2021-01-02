@@ -86,6 +86,10 @@
     <Compile Include="Migrations\202012311439128_foreign key.Designer.cs">
       <DependentUpon>202012311439128_foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101022014132_book crime foreign key.cs" />
+    <Compile Include="Migrations\202101022014132_book crime foreign key.Designer.cs">
+      <DependentUpon>202101022014132_book crime foreign key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012311439128_foreign key.resx">
       <DependentUpon>202012311439128_foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101022014132_book crime foreign key.resx">
+      <DependentUpon>202101022014132_book crime foreign key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

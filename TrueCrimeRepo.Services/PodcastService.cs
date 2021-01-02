@@ -39,7 +39,6 @@ namespace TrueCrimeRepo.Services
             }
 
         }
-
         public IEnumerable<PodcastListItem> GetPodcasts()
         {
             using (var ctx = new ApplicationDbContext())

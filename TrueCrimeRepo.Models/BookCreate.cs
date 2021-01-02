@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Data;
 
-namespace TrueCrimeRepo.Data
+namespace TrueCrimeRepo.Models
 {
-    public class Book
+    public class BookCreate
     {
-        [Key]
         public int BookID { get; set; }
 
         [ForeignKey("Crime")]
@@ -39,4 +39,7 @@ namespace TrueCrimeRepo.Data
         public string BookAuthor { get; set; }
 
     }
+
 }
+
+
