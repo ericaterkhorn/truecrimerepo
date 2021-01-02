@@ -110,6 +110,27 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var svc = CreatePodcastService();
+            var model = svc.GetPodcastByID(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePodcast(int id)
+        {
+            var service = CreatePodcastService();
+
+            service.DeletePodcast(id);
+
+            TempData["SaveResult"] = "Your Podcast was deleted.";
+
+            return RedirectToAction("Index");
+        }
         private PodcastService CreatePodcastService()
         {
             var userID = User.Identity.GetUserId();

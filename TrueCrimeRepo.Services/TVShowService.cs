@@ -101,5 +101,19 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteTVShow(int TVShowID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TVShows
+                        .Single(e => e.TVShowID == TVShowID && e.UserId == _userID);
+
+                ctx.TVShows.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

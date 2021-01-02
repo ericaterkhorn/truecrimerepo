@@ -102,6 +102,27 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateTVShowService();
+            var model = svc.GetTVShowByID(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteTVShow(int id)
+        {
+            var service = CreateTVShowService();
+
+            service.DeleteTVShow(id);
+
+            TempData["SaveResult"] = "Your TV Show was deleted.";
+
+            return RedirectToAction("Index");
+        }
         private TVShowService CreateTVShowService()
         {
             var userID = User.Identity.GetUserId();

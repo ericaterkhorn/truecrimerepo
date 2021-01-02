@@ -102,5 +102,19 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeletePodcast(int PodcastID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Podcasts
+                        .Single(e => e.PodcastID == PodcastID && e.UserId == _userID);
+
+                ctx.Podcasts.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

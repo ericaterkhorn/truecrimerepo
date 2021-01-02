@@ -252,6 +252,7 @@
     <Content Include="Views\TVShow\Create.cshtml" />
     <Content Include="Views\TVShow\Details.cshtml" />
     <Content Include="Views\TVShow\Edit.cshtml" />
+    <Content Include="Views\TVShow\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
