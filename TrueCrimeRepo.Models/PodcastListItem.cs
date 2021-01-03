@@ -12,7 +12,7 @@ namespace TrueCrimeRepo.Models
     {
         public int PodcastID { get; set; }
 
-        public string ApplicationUser { get; set; }
+        //public string ApplicationUser { get; set; }
 
         public int CrimeID { get; set; }
 

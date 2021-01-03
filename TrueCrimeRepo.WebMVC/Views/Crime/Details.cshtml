@@ -7,7 +7,7 @@
 <h2>True Crime Details</h2>
 
 <div>
-    <h4>CrimeDetail</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -77,19 +77,29 @@
             @Html.DisplayNameFor(model => model.Podcasts)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Podcasts)
+            @foreach (var podcast in Model.Podcasts)
+            {
+            @Html.DisplayFor(model => podcast.WebsiteUrl)
+            }
+
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.TVShows)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.TVShows)
+            @foreach (var tvshow in Model.TVShows)
+            {
+                @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
+            }
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Books)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Books)
+            @foreach (var book in Model.Books)
+            {
+                @Html.DisplayFor(model => book.Title)
+            }
         </dd>
     </dl>
 </div>
