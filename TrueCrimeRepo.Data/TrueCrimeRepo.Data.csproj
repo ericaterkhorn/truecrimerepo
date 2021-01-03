@@ -90,6 +90,14 @@
     <Compile Include="Migrations\202101022014132_book crime foreign key.Designer.cs">
       <DependentUpon>202101022014132_book crime foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101022202175_book createdutc.cs" />
+    <Compile Include="Migrations\202101022202175_book createdutc.Designer.cs">
+      <DependentUpon>202101022202175_book createdutc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101030016328_book.cs" />
+    <Compile Include="Migrations\202101030016328_book.Designer.cs">
+      <DependentUpon>202101030016328_book.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101022014132_book crime foreign key.resx">
       <DependentUpon>202101022014132_book crime foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101022202175_book createdutc.resx">
+      <DependentUpon>202101022202175_book createdutc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101030016328_book.resx">
+      <DependentUpon>202101030016328_book.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

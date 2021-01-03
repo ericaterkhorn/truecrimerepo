@@ -8,7 +8,7 @@ using TrueCrimeRepo.Models;
 
 namespace TrueCrimeRepo.Services
 {
-    class BookService
+    public class BookService
     {
         private readonly string _userID;
         private ApplicationUser _user;
@@ -29,7 +29,7 @@ namespace TrueCrimeRepo.Services
                     Title = model.Title,
                     Description = model.Description,
                     BookAuthor = model.BookAuthor,
-                    //CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -59,6 +59,27 @@ namespace TrueCrimeRepo.Services
                         );
 
                 return query.ToArray();
+            }
+        }
+
+        public BookDetail GetBookByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.BookID == id && e.UserId == _userID);
+                return
+                    new BookDetail
+                    {
+                        BookID = entity.BookID,
+                        Title = entity.Title,
+                        Description = entity.Description,
+                        BookAuthor = entity.BookAuthor,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
             }
         }
 

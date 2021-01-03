@@ -38,5 +38,9 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Book Author")]
         public string BookAuthor { get; set; }
 
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
+
     }
 }

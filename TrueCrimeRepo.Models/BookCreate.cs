@@ -11,15 +11,13 @@ namespace TrueCrimeRepo.Models
 {
     public class BookCreate
     {
-        public int BookID { get; set; }
-
         [ForeignKey("Crime")]
         public int CrimeID { get; set; }
         public virtual Crime Crime { get; set; }
 
-        public string UserId { get; set; }
-        [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set; }
+        //public string UserId { get; set; }
+        //[ForeignKey("UserId")]
+        //public virtual ApplicationUser User { get; set; }
 
         [Required]
         [MinLength(4, ErrorMessage = "Please enter the full name of the book.")]

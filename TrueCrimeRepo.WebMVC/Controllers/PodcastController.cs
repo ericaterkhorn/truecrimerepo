@@ -131,6 +131,13 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
             return RedirectToAction("Index");
         }
+        
+        private CrimeService CreateCrimeService()
+        {
+            var userID = User.Identity.GetUserId();
+            var service = new CrimeService(userID);
+            return service;
+        }
         private PodcastService CreatePodcastService()
         {
             var userID = User.Identity.GetUserId();
@@ -138,11 +145,5 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return service;
         }
 
-        private CrimeService CreateCrimeService()
-        {
-            var userID = User.Identity.GetUserId();
-            var service = new CrimeService(userID);
-            return service;
-        }
     }
 }
