@@ -44,7 +44,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(BookCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = CreateBookService();
             if (service.CreateBook(model))
@@ -62,6 +62,44 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             var svc = CreateBookService();
             var model = svc.GetBookByID(id);
 
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateBookService();
+            var detail = service.GetBookByID(id);
+            var model =
+                new BookEdit
+                {
+                    BookID = detail.BookID,
+                    Title = detail.Title,
+                    Description = detail.Description,
+                    BookAuthor = detail.BookAuthor
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, BookEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.BookID != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            var service = CreateBookService();
+
+            if (service.UpdateBook(model))
+            {
+                TempData["SaveResult"] = "Your true crime book was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your true crime book could not be updated.");
             return View(model);
         }
 

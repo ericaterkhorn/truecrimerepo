@@ -82,6 +82,23 @@ namespace TrueCrimeRepo.Services
                     };
             }
         }
+        public bool UpdateBook(BookEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.BookID == model.BookID && e.UserId == _userID);
+
+                entity.Title = model.Title;
+                entity.Description = model.Description;
+                entity.BookAuthor = model.BookAuthor;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
     }
 }
