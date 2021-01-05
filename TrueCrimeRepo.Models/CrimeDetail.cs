@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Models
     public class CrimeDetail
     {
         public int CrimeID { get; set; }
-        [Display(Name = "True Crime Name")]
+        [Display(Name = "Name of True Crime")]
         public string Title { get; set; }
         [Display(Name = "Description of the crime")]
         public string Description { get; set; }

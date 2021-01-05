@@ -10,97 +10,99 @@
     <h4></h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.CrimeID)
-        </dt>
+        </dt>*@
 
-        <dd>
+        @*<dd>
             @Html.DisplayFor(model => model.CrimeID)
-        </dd>
+        </dd>*@
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.Perpetrator)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Perpetrator)
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.IsSolved)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Perpetrator)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IsSolved)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Perpetrator)
-        </dd>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.CreatedUtc)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedUtc)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedUtc)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IsSolved)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedUtc)
+            </dd>*@
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.Podcasts)
+            </dt>
+            <dd>
+                @foreach (var podcast in Model.Podcasts)
+                {
+                    @Html.DisplayFor(model => podcast.WebsiteUrl);
+                }
 
-        <dd>
-            @Html.DisplayFor(model => model.IsSolved)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUtc)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Podcasts)
-        </dt>
-        <dd>
-            @foreach (var podcast in Model.Podcasts)
-            {
-            @Html.DisplayFor(model => podcast.WebsiteUrl)
-            }
-
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.TVShows)
-        </dt>
-        <dd>
-            @foreach (var tvshow in Model.TVShows)
-            {
-                @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
-            }
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Books)
-        </dt>
-        <dd>
-            @foreach (var book in Model.Books)
-            {
-                @Html.DisplayFor(model => book.Title)
-            }
-        </dd>
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.TVShows)
+            </dt>
+            <dd>
+                @foreach (var tvshow in Model.TVShows)
+                {
+                    @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
+                }
+            </dd>
+            <br />
+            <dt>
+                @Html.DisplayNameFor(model => model.Books)
+            </dt>
+            <dd>
+                @foreach (var book in Model.Books)
+                {
+                    @Html.DisplayFor(model => book.Title)
+                }
+            </dd>
     </dl>
 </div>
 <p>

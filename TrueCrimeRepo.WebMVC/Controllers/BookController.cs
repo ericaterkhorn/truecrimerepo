@@ -103,7 +103,27 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateBookService();
+            var model = svc.GetBookByID(id);
 
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteBook(int id)
+        {
+            var service = CreateBookService();
+
+            service.DeleteBook(id);
+
+            TempData["SaveResult"] = "Your true crime book was deleted";
+
+            return RedirectToAction("Index");
+        }
         private BookService CreateBookService()
         {
             var userID = User.Identity.GetUserId();

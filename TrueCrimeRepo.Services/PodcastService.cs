@@ -53,6 +53,7 @@ namespace TrueCrimeRepo.Services
                                 {
                                     PodcastID = e.PodcastID,
                                     CrimeID = e.CrimeID,
+                                    Crime = e.Crime, 
                                     Title = e.Title,
                                     Description = e.Description,
                                     WebsiteUrl = e.WebsiteUrl

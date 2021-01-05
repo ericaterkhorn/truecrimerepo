@@ -21,15 +21,18 @@
 }
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.PodcastID)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.ApplicationUser)
         </th>*@
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.CrimeID)
-        </th>*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crime)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -51,15 +54,15 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.PodcastID)
-            </td>
+            </td>*@
             @*<td>
                 @Html.DisplayFor(modelItem => item.ApplicationUser)
             </td>*@
-            @*<td>
+            <td>
                 @Html.DisplayFor(modelItem => item.CrimeID)
-            </td>*@
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>

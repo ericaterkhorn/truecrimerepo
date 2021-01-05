@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Data;
 
 namespace TrueCrimeRepo.Models
 {
@@ -12,8 +13,12 @@ namespace TrueCrimeRepo.Models
     {
         public int PodcastID { get; set; }
 
+        //public int CrimeID { get; set; }
+
+        [ForeignKey("Crime")]
         public int CrimeID { get; set; }
-     
+        public virtual Crime Crime { get; set; }
+
         [Display(Name = "Podcast Title")]
         public string Title { get; set; }
         [Display(Name = "Podcast Description")]

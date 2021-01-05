@@ -68,6 +68,10 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             var svc = CreatePodcastService();
             var model = svc.GetPodcastByID(id);
 
+            var crimeServ = CreateCrimeService();
+            var getCrimes = crimeServ.GetCrimes();
+            ViewBag.Crimes = getCrimes.ToList();
+
             return View(model);
         }
 
