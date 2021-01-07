@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Data;
 
 namespace TrueCrimeRepo.Models
 {
@@ -13,7 +15,9 @@ namespace TrueCrimeRepo.Models
 
         //public string ApplicationUser { get; set; }
 
+        [ForeignKey("Crime")]
         public int CrimeID { get; set; }
+        public virtual Crime Crime { get; set; }
 
         [Display(Name = "Name of Book")]
         public string Title { get; set; }

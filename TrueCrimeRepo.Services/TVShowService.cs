@@ -53,6 +53,7 @@ namespace TrueCrimeRepo.Services
                                 {
                                     TVShowID = e.TVShowID,
                                     CrimeID = e.CrimeID,
+                                    Crime = e.Crime,
                                     Title = e.Title,
                                     Description = e.Description,
                                     Channel_OnlineStream = e.Channel_OnlineStream
@@ -76,6 +77,7 @@ namespace TrueCrimeRepo.Services
                     {
                         TVShowID = entity.TVShowID,
                         CrimeID = entity.CrimeID,
+                        Crime = entity.Crime,
                         Title = entity.Title,
                         Description = entity.Description,
                         Channel_OnlineStream = entity.Channel_OnlineStream,
@@ -97,6 +99,7 @@ namespace TrueCrimeRepo.Services
                 entity.Title = model.Title;
                 entity.Description = model.Description;
                 entity.Channel_OnlineStream = model.Channel_OnlineStream;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }

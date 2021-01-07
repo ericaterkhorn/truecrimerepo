@@ -19,6 +19,8 @@ namespace TrueCrimeRepo.Data
         public int CrimeID { get; set; }
         public virtual Crime Crime { get; set; }
 
+        //public string CrimeTitle { get; set; }
+
         public string UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual ApplicationUser User { get; set; }

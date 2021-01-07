@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>True Crime TV Shows</h2>
+<h2>True Crime TV Shows/Documentaries</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -21,9 +21,9 @@
 }
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.TVShowID)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -39,9 +39,9 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.TVShowID)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>

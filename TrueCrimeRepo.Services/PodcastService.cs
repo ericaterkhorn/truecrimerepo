@@ -56,7 +56,7 @@ namespace TrueCrimeRepo.Services
                                     Crime = e.Crime, 
                                     Title = e.Title,
                                     Description = e.Description,
-                                    WebsiteUrl = e.WebsiteUrl
+                                    WebsiteUrl = e.WebsiteUrl,
                                 }
                         );
 
@@ -77,6 +77,7 @@ namespace TrueCrimeRepo.Services
                     {
                         PodcastID = entity.PodcastID,
                         CrimeID = entity.CrimeID,
+                        Crime = entity.Crime,
                         Title = entity.Title,
                         Description = entity.Description,
                         WebsiteUrl = entity.WebsiteUrl,

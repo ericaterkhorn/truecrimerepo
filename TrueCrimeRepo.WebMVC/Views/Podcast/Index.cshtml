@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Podcasts</h2>
+<h2>True Crime Podcasts</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -27,11 +27,11 @@
         @*<th>
             @Html.DisplayNameFor(model => model.ApplicationUser)
         </th>*@
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.CrimeID)
-        </th>
+        </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Crime)
+            @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -60,8 +60,11 @@
             @*<td>
                 @Html.DisplayFor(modelItem => item.ApplicationUser)
             </td>*@
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.CrimeID)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Crime.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)

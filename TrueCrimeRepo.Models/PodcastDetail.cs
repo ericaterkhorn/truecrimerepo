@@ -19,6 +19,7 @@ namespace TrueCrimeRepo.Models
         public int CrimeID { get; set; }
         public virtual Crime Crime { get; set; }
 
+
         [Display(Name = "Podcast Title")]
         public string Title { get; set; }
         [Display(Name = "Podcast Description")]

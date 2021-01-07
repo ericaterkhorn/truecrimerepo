@@ -52,6 +52,7 @@ namespace TrueCrimeRepo.Services
                                 {
                                     BookID = e.BookID,
                                     CrimeID = e.CrimeID,
+                                    Crime = e.Crime,
                                     Title = e.Title,
                                     Description = e.Description,
                                     BookAuthor = e.BookAuthor
@@ -74,6 +75,8 @@ namespace TrueCrimeRepo.Services
                     new BookDetail
                     {
                         BookID = entity.BookID,
+                        CrimeID = entity.CrimeID,
+                        Crime = entity.Crime,
                         Title = entity.Title,
                         Description = entity.Description,
                         BookAuthor = entity.BookAuthor,
