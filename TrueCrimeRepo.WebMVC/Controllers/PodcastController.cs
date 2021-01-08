@@ -39,7 +39,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             //return View(model);
             var crimeServ = CreateCrimeService();
             var getCrimes = crimeServ.GetCrimes();
-            ViewBag.Crimes = getCrimes.ToList();
+            ViewBag.Crimes = getCrimes.OrderBy(p => p.Title).ToList();
             return View();
 
         }

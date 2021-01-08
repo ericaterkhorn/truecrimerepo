@@ -48,7 +48,11 @@
         <th>
             @Html.DisplayNameFor(model => model.ModifiedUtc)
         </th>*@
-        <th></th>
+
+        <th>
+            To view details, edit, or delete, please click below.
+        </th>
+
     </tr>
 
     @foreach (var item in Model)
@@ -81,6 +85,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ModifiedUtc)
             </td>*@
+
+
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.PodcastID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.PodcastID }) |
