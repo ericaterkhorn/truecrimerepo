@@ -13,8 +13,10 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     public class CrimeController : Controller
     {
         // GET: Crime
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
+            //ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title" : "";
+            //var crimes = from e in 
             //var model = new CrimeListItem[0];
             //var userId = Guid.Parse(User.Identity.GetUserId());
             var userID = User.Identity.GetUserId();

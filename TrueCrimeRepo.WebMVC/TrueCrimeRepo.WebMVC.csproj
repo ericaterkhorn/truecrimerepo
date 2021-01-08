@@ -193,6 +193,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\Black and White Paper Typography True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Black and White Photo True Crime &amp; Investigative Journalism Podcast Cover.png" />
+    <Content Include="Images\Edgy Sportswear Etsy Banner.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

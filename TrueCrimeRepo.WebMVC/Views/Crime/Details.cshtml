@@ -79,7 +79,8 @@
             <dd>
                 @foreach (var podcast in Model.Podcasts)
                 {
-                    @Html.DisplayFor(model => podcast.WebsiteUrl);
+                    @Html.DisplayFor(model => podcast.WebsiteUrl)
+                    <br/>
                 }
 
             </dd>
@@ -91,6 +92,7 @@
                 @foreach (var tvshow in Model.TVShows)
                 {
                     @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
+                    <br />
                 }
             </dd>
             <br />
@@ -101,6 +103,7 @@
                 @foreach (var book in Model.Books)
                 {
                     @Html.DisplayFor(model => book.Title)
+                    <br />
                 }
             </dd>
     </dl>
