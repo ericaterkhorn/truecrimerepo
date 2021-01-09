@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<img src="~/Images/Podcasts.png" style="width: 100%" />
 <h2>True Crime Podcasts</h2>
 
 <p>
@@ -22,14 +22,14 @@
 <table class="table">
     <tr>
         @*<th>
-            @Html.DisplayNameFor(model => model.PodcastID)
-        </th>*@
+                @Html.DisplayNameFor(model => model.PodcastID)
+            </th>*@
         @*<th>
-            @Html.DisplayNameFor(model => model.ApplicationUser)
-        </th>*@
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </th>*@
         @*<th>
-            @Html.DisplayNameFor(model => model.CrimeID)
-        </th>*@
+                @Html.DisplayNameFor(model => model.CrimeID)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
@@ -43,11 +43,11 @@
             @Html.DisplayNameFor(model => model.WebsiteUrl)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </th>*@
+                @Html.DisplayNameFor(model => model.CreatedUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUtc)
+            </th>*@
 
         <th>
             To view details, edit, or delete, please click below.
@@ -59,14 +59,14 @@
     {
         <tr>
             @*<td>
-                @Html.DisplayFor(modelItem => item.PodcastID)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.PodcastID)
+                </td>*@
             @*<td>
-                @Html.DisplayFor(modelItem => item.ApplicationUser)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.ApplicationUser)
+                </td>*@
             @*<td>
-                @Html.DisplayFor(modelItem => item.CrimeID)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.CrimeID)
+                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Crime.Title)
             </td>
@@ -80,19 +80,29 @@
                 @Html.DisplayFor(modelItem => item.WebsiteUrl)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedUtc)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.CreatedUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifiedUtc)
+                </td>*@
 
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.PodcastID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.PodcastID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.PodcastID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.PodcastID })
             </td>
         </tr>
+        <style type="text/css">
+            td {
+                width: 100px;
+            }
+
+            th {
+                width: 100px;
+            }
+        </style>
+
     }
 
 </table>

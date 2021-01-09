@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Services
     public class CrimeService
     {
         private readonly string _userID;
-        private ApplicationUser _user;
+        //private ApplicationUser _user;
 
         public CrimeService(string userID)
         {

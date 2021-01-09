@@ -22,15 +22,15 @@
 <table class="table">
     <tr>
         @*<th>
-            @Html.DisplayNameFor(model => model.BookID)
-        </th>*@
+                @Html.DisplayNameFor(model => model.BookID)
+            </th>*@
         @*<th>
-            @Html.DisplayNameFor(model => model.ApplicationUser)
-        </th>*@
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </th>*@
         @*<th>
-            @Html.DisplayNameFor(model => model.CrimeID)
-        </th>*@
-       <th>
+                @Html.DisplayNameFor(model => model.CrimeID)
+            </th>*@
+        <th>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
@@ -43,50 +43,61 @@
             @Html.DisplayNameFor(model => model.BookAuthor)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </th>*@
+                @Html.DisplayNameFor(model => model.CreatedUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUtc)
+            </th>*@
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-<tr>
-    @*<td>
-        @Html.DisplayFor(modelItem => item.BookID)
-    </td>*@
-    @*<td>
-            @Html.DisplayFor(modelItem => item.ApplicationUser)
-        </td>*@
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CrimeID)
-        </td>*@
-    <td>
-        @Html.DisplayFor(modelItem => item.Crime.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.BookAuthor)
-    </td>
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModifiedUtc)
-        </td>*@
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
-    </td>
-</tr>
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.BookID)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CrimeID)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Crime.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookAuthor)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CreatedUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifiedUtc)
+                </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
+            </td>
+        </tr>
+
+        <style type="text/css">
+            td {
+                width: 100px;
+            }
+
+            th {
+                width: 100px;
+            }
+        </style>
+
     }
 
 </table>

@@ -7,10 +7,10 @@
 <h2>Add a New True Crime For Our Repo</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-  
+
     <div class="form-horizontal">
         <h4></h4>
         <hr />
@@ -32,12 +32,12 @@
         </div>
 
         @*<div class="form-group">
-            @Html.LabelFor(model => model.Year, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Year, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Year, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
+                @Html.LabelFor(model => model.Year, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Year, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Year, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Perpetrator, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -71,11 +71,24 @@
             </div>
         </div>
     </div>
+
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+<style type="text/css">
+    td {
+        width: 100px;
+    }
+
+    th {
+        width: 100px;
+    }
+</style>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<img src="~/Images/Edgy Sportswear Etsy Banner.png" />
+<img src="~/Images/Edgy Sportswear Etsy Banner.png" style="width: 100%">
 
 <h2>Crimes</h2>
 <p>Find all of our true crimes listed below. </p>
@@ -25,8 +25,8 @@
         <table class="table table-hover">
             <tr>
                 @*<th>
-                    @Html.DisplayNameFor(model => model.CrimeID)
-                </th>*@
+                        @Html.DisplayNameFor(model => model.CrimeID)
+                    </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
@@ -34,8 +34,8 @@
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 @*<th>
-                    @Html.DisplayNameFor(model => model.Year)
-                </th>*@
+                        @Html.DisplayNameFor(model => model.Year)
+                    </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.Perpetrator)
                 </th>
@@ -48,41 +48,52 @@
                 <th>
                     To view details, edit, or delete, please click below.
                 </th>
-            </tr>
-
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    @*<td>
-                        @Html.DisplayFor(modelItem => item.CrimeID)
-                    </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    @*<td>
-                        @Html.DisplayFor(modelItem => item.Year)
-                    </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Perpetrator)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Location)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsSolved)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID })
-                    </td>
-                </tr>
-            }
-        </table>
     </div>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CrimeID)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Title@*, "Index", new { sortOrder = ViewBag.TitleSortParm }*@)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Perpetrator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSolved)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CrimeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID })
+            </td>
+        </tr>
+    }
+    </table>
+
 </div>
+
+<style type="text/css">
+    td {
+        width: 100px;
+    }
+
+    th {
+        width: 100px;
+    }
+</style>
 

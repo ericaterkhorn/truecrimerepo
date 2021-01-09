@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrueCrimeRepo.Data;
 using TrueCrimeRepo.Models;
 using TrueCrimeRepo.Services;
 
@@ -13,12 +14,19 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     public class CrimeController : Controller
     {
         // GET: Crime
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(/*string sortOrder, string searchString*/)
         {
-            //ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title" : "";
-            //var crimes = from e in 
-            //var model = new CrimeListItem[0];
-            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "Title" : "";
+            //var crimes = from s in CrimeListItem
+            //             select s;
+
+            //if (!String.IsNullOrEmpty(searchString))
+            //{
+            //    crimes = crimes.Where(s => s.Title.Contains(searchString)
+            //                           || s.Title.Contains(searchString));
+            //}
+            ////var model = new CrimeListItem[0];
+            ////var userId = Guid.Parse(User.Identity.GetUserId());
             var userID = User.Identity.GetUserId();
             var service = new CrimeService(userID);
             var model = service.GetCrimes();

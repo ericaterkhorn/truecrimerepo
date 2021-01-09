@@ -22,8 +22,8 @@
 <table class="table">
     <tr>
         @*<th>
-            @Html.DisplayNameFor(model => model.TVShowID)
-        </th>*@
+                @Html.DisplayNameFor(model => model.TVShowID)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -40,8 +40,8 @@
     {
         <tr>
             @*<td>
-                @Html.DisplayFor(modelItem => item.TVShowID)
-            </td>*@
+                    @Html.DisplayFor(modelItem => item.TVShowID)
+                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -52,11 +52,20 @@
                 @Html.DisplayFor(modelItem => item.Channel_OnlineStream)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id=item.TVShowID }) |
-                @Html.ActionLink("Details", "Details", new {id=item.TVShowID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.TVShowID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.TVShowID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TVShowID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TVShowID })
             </td>
         </tr>
+        <style type="text/css">
+            td {
+                width: 100px;
+            }
+
+            th {
+                width: 100px;
+            }
+        </style>
     }
 
 </table>
