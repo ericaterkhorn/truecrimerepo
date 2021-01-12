@@ -25,12 +25,23 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             //    crimes = crimes.Where(s => s.Title.Contains(searchString)
             //                           || s.Title.Contains(searchString));
             //}
+
             ////var model = new CrimeListItem[0];
             ////var userId = Guid.Parse(User.Identity.GetUserId());
+            
             var userID = User.Identity.GetUserId();
             var service = new CrimeService(userID);
             var model = service.GetCrimes();
+
+            //ViewBag.CrimeListItem = model.OrderBy(p => p.Title).ToList();
+            //IEnumerable<Crime> crimeList = .Crimes.ToList();
+            //IEnumerable<Crime> orderedList = crimeList.OrderBy(Crime => Crime.Title).ToList();
+
+            //ViewBag.GetCrimes = model.OrderBy(p => p.Title).ToList();
+
+            //ViewBag.Crimes = model.OrderBy(p => p.Title).ToList();
             return View(model);
+            //return View(orderedList);
         }
 
         public ActionResult Create()

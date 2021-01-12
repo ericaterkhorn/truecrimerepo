@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<img src="~/Images/Books.png" style="width: 100%" />
 <h2>True Crime Books</h2>
 
 <p>
@@ -48,10 +48,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.ModifiedUtc)
             </th>*@
-        <th></th>
+        <th class="col-md-3">
+            To view details, edit, or delete, please click below.
+         </th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
         <tr>
             @*<td>
@@ -82,11 +84,16 @@
                     @Html.DisplayFor(modelItem => item.ModifiedUtc)
                 </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.BookID }, new { @class = "btn btn-primary" }) 
+                @Html.ActionLink("Details", "Details", new { id = item.BookID }, new { @class = "btn btn-warning" }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.BookID }, new { @class = "btn btn-danger" })
             </td>
         </tr>
+
+    }
+
+</table>
+
 
         <style type="text/css">
             td {
@@ -97,7 +104,3 @@
                 width: 100px;
             }
         </style>
-
-    }
-
-</table>

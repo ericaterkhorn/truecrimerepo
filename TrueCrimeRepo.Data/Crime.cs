@@ -54,6 +54,8 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Is the crime solved?")]
         public bool IsSolved { get; set; }
 
+        //public Solved IsSolved { get; set; }
+
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
@@ -75,6 +77,11 @@ namespace TrueCrimeRepo.Data
         //    //public ICollection<Crime> Crimes { get; set; }
         //    public ICollection<SelectListItem> Crimes { get; set; }
         //}
+    }
+    public enum Solved
+    {
+        Yes,
+        No
     }
 }
 

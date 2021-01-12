@@ -45,7 +45,7 @@ namespace TrueCrimeRepo.Services
                 var query =
                     ctx
                         .Crimes
-                        .Where(e => e.UserId == _userID)
+                        //.Where(e => e.UserId == _userID)
                         .Select(
                             e =>
                                 new CrimeListItem
@@ -73,7 +73,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.CrimeID == id && e.UserId == _userID);
+                        .Single(e => e.CrimeID == id);/*&& e.UserId == _userID);*/
                 return
                     new CrimeDetail
                     {

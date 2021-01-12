@@ -9,6 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -19,6 +20,7 @@
         @TempData["SaveResult"]
     </div>
 }
+
 <table class="table">
     <tr>
         @*<th>
@@ -49,7 +51,7 @@
                 @Html.DisplayNameFor(model => model.ModifiedUtc)
             </th>*@
 
-        <th>
+        <th class="col-md-3">
             To view details, edit, or delete, please click below.
         </th>
 
@@ -87,22 +89,25 @@
                 </td>*@
 
 
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PodcastID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PodcastID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PodcastID })
-            </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PodcastID }, new { @class = "btn btn-primary" })
+   
+            @Html.ActionLink("Details", "Details", new { id = item.PodcastID }, new { @class = "btn btn-warning" })
+      
+            @Html.ActionLink("Delete", "Delete", new { id = item.PodcastID }, new { @class = "btn btn-danger" })
+        </td>
         </tr>
-        <style type="text/css">
-            td {
-                width: 100px;
-            }
-
-            th {
-                width: 100px;
-            }
-        </style>
+        
 
     }
 
 </table>
+<style type="text/css">
+    td {
+        width: 100px;
+    }
+
+    th {
+        width: 100px;
+    }
+</style>

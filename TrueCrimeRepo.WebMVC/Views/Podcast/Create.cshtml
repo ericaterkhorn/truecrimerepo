@@ -5,8 +5,8 @@
 }
 
 <br />
-@*<h2>Add a New True Crime Podcast</h2>*@
-<img src="~/images/Black and White Paper Typography True Crime & Investigative Journalism Podcast Cover.png" alt="homepage Photo" style="height:300px">
+<h2>Add a New True Crime Podcast</h2>
+
 
 @using (Html.BeginForm())
 {
@@ -20,7 +20,7 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Crime, "Crime", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-5">
+        <div class="col-md-8">
             @Html.DropDownListFor(model => model.CrimeID, new SelectList(ViewBag.Crimes, "CrimeID", "Title"), "Select Crime")
             @Html.ValidationMessageFor(model => model.CrimeID, "", new { @class = "text-danger" })
         </div>
@@ -35,7 +35,7 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+        <div class="col-md-8">
             @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
         </div>
@@ -43,7 +43,7 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+        <div class="col-md-8">
             @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
         </div>
@@ -51,7 +51,7 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.WebsiteUrl, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+        <div class="col-md-8">
             @Html.EditorFor(model => model.WebsiteUrl, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.WebsiteUrl, "", new { @class = "text-danger" })
         </div>
@@ -75,7 +75,7 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Create" class="btn btn-warning" />
         </div>
     </div>
 </div>

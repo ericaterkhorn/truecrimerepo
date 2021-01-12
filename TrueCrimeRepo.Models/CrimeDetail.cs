@@ -21,6 +21,7 @@ namespace TrueCrimeRepo.Models
         public string Location { get; set; }
         [Display(Name = "Is the crime solved?")]
         public bool IsSolved { get; set; }
+        //public Solved IsSolved { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]

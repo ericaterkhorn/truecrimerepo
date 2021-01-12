@@ -45,46 +45,54 @@
                 <th>
                     @Html.DisplayNameFor(model => model.IsSolved)
                 </th>
-                <th>
+                <th class="col-md-3">
                     To view details, edit, or delete, please click below.
                 </th>
+            </tr>
+
+
+
+
+            @foreach (var item in Model.OrderBy(Model=>Model.Title))
+            {
+                <tr>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.CrimeID)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                        @*, "Index", new { sortOrder = ViewBag.TitleSortParm }*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Year)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Perpetrator)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsSolved)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
+
+
+                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-primary" })
+
+
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
+
+                    </td>
+                </tr>
+            }
+        </table>
+
     </div>
-    </tr>
-
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.CrimeID)
-                </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Title@*, "Index", new { sortOrder = ViewBag.TitleSortParm }*@)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Perpetrator)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsSolved)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CrimeID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID })
-            </td>
-        </tr>
-    }
-    </table>
-
 </div>
 
 <style type="text/css">
