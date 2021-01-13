@@ -98,6 +98,10 @@
     <Compile Include="Migrations\202101030016328_book.Designer.cs">
       <DependentUpon>202101030016328_book.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101132300087_yes no dropdown.cs" />
+    <Compile Include="Migrations\202101132300087_yes no dropdown.Designer.cs">
+      <DependentUpon>202101132300087_yes no dropdown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101030016328_book.resx">
       <DependentUpon>202101030016328_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101132300087_yes no dropdown.resx">
+      <DependentUpon>202101132300087_yes no dropdown.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

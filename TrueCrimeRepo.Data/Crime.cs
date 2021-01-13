@@ -54,7 +54,7 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Is the crime solved?")]
         public bool IsSolved { get; set; }
 
-        //public Solved IsSolved { get; set; }
+        public Solved IsCrimeSolved { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

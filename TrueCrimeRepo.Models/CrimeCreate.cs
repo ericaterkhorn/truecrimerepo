@@ -38,6 +38,7 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Check the box if the crime is solved")]
         public bool IsSolved { get; set; }
 
-        //public Solved IsSolved { get; set; }
+        public Solved IsCrimeSolved { get; set; }
+        
     }
 }

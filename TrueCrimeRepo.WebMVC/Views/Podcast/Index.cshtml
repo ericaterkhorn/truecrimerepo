@@ -57,7 +57,7 @@
 
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.OrderBy(Model => Model.Title))
     {
         <tr>
             @*<td>

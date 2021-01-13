@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Services
     public class PodcastService
     {
         private readonly string _userID;
-        private ApplicationUser _user;
+        //private ApplicationUser _user;
 
         public PodcastService(string userID)
         {
@@ -46,7 +46,7 @@ namespace TrueCrimeRepo.Services
                 var query =
                     ctx
                         .Podcasts
-                        .Where(e => e.UserId == _userID)
+                        //.Where(e => e.UserId == _userID)
                         .Select(
                             e =>
                                 new PodcastListItem
@@ -71,7 +71,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Podcasts
-                        .Single(e => e.PodcastID == id && e.UserId == _userID);
+                        .Single(e => e.PodcastID == id); /*&& e.UserId == _userID);*/
                 return
                     new PodcastDetail
                     {

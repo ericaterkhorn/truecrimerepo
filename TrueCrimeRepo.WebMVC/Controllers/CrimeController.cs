@@ -86,6 +86,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
                     Perpetrator = detail.Perpetrator,
                     Location = detail.Location,
                     IsSolved = detail.IsSolved,
+                    IsCrimeSolved = detail.IsCrimeSolved,
                     Podcasts = detail.Podcasts,
                     TVShows = detail.TVShows,
                     Books = detail.Books

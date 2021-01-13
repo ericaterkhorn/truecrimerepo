@@ -29,6 +29,7 @@ namespace TrueCrimeRepo.Services
                     Perpetrator = model.Perpetrator,
                     Location = model.Location,
                     IsSolved = model.IsSolved,
+                    IsCrimeSolved = model.IsCrimeSolved,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
@@ -57,6 +58,7 @@ namespace TrueCrimeRepo.Services
                                     Perpetrator = e.Perpetrator,
                                     Location = e.Location,
                                     IsSolved = e.IsSolved,
+                                    IsCrimeSolved = e.IsCrimeSolved,
                                     Podcasts = e.Podcasts,
                                     TVShows = e.TVShows,
                                     Books = e.Books,
@@ -84,6 +86,7 @@ namespace TrueCrimeRepo.Services
                         Perpetrator = entity.Perpetrator,
                         Location = entity.Location,
                         IsSolved = entity.IsSolved,
+                        IsCrimeSolved = entity.IsCrimeSolved,
                         Podcasts = entity.Podcasts,
                         TVShows = entity.TVShows,
                         Books = entity.Books
@@ -104,6 +107,7 @@ namespace TrueCrimeRepo.Services
                 entity.Perpetrator = model.Perpetrator;
                 entity.Location = model.Location;
                 entity.IsSolved = model.IsSolved;
+                entity.IsCrimeSolved = model.IsCrimeSolved;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

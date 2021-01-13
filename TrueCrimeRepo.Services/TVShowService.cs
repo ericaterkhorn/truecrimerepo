@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Services
     public class TVShowService
     {
         private readonly string _userID;
-        private ApplicationUser _user;
+        //private ApplicationUser _user;
 
         public TVShowService(string userID)
         {
@@ -46,7 +46,7 @@ namespace TrueCrimeRepo.Services
                 var query =
                     ctx
                         .TVShows
-                        .Where(e => e.UserId == _userID)
+                        //.Where(e => e.UserId == _userID)
                         .Select(
                             e =>
                                 new TVShowListItem
@@ -71,7 +71,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .TVShows
-                        .Single(e => e.TVShowID == id && e.UserId == _userID);
+                        .Single(e => e.TVShowID == id); /*&& e.UserId == _userID);*/
                 return
                     new TVShowDetail
                     {

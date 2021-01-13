@@ -11,7 +11,7 @@ namespace TrueCrimeRepo.Services
     public class BookService
     {
         private readonly string _userID;
-        private ApplicationUser _user;
+        //private ApplicationUser _user;
 
         public BookService(string userID)
         {
@@ -45,7 +45,7 @@ namespace TrueCrimeRepo.Services
                 var query =
                     ctx
                         .Books
-                        .Where(e => e.UserId == _userID)
+                        //.Where(e => e.UserId == _userID)
                         .Select(
                             e =>
                                 new BookListItem
@@ -70,7 +70,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.BookID == id && e.UserId == _userID);
+                        .Single(e => e.BookID == id); /*&& e.UserId == _userID);*/
                 return
                     new BookDetail
                     {

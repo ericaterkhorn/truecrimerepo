@@ -42,7 +42,7 @@
         </th>
     </tr>
 
-    @foreach (var item in Model.OrderBy(Model => Model.Title))
+    @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
 <tr>
     @*<td>
