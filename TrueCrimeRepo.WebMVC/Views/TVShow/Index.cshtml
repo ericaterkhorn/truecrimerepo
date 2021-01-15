@@ -30,6 +30,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
+
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -49,7 +50,7 @@
                     @Html.DisplayFor(modelItem => item.TVShowID)
                 </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.Crime.Title)
+                <a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
