@@ -25,6 +25,7 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Podcast Description")]
         public string Description { get; set; }
         [Display(Name = "Website")]
+        [Url]
         public string WebsiteUrl { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -28,6 +28,7 @@ namespace TrueCrimeRepo.Models
 
 
         [Display(Name = "Where to find the show")]
+        [Url]
         public string Channel_OnlineStream{ get; set; }
 
         //public DateTimeOffset CreatedUtc { get; set; }

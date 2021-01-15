@@ -35,9 +35,7 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Enter the US city and state of the crime")]
         public string Location { get; set; }
 
-        [Display(Name = "Check the box if the crime is solved")]
-        public bool IsSolved { get; set; }
-
+        [Display(Name = "Is the crime solved? Please select an option.")]
         public Solved IsCrimeSolved { get; set; }
         
     }

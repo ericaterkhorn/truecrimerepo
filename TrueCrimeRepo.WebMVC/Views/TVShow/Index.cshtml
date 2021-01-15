@@ -20,11 +20,11 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
-    <tr>
+<table class="table table-hover">
+    <tr style="background-color: darkgrey">
         @*<th>
-            @Html.DisplayNameFor(model => model.TVShowID)
-        </th>*@
+                @Html.DisplayNameFor(model => model.TVShowID)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
@@ -44,28 +44,28 @@
 
     @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
-<tr>
-    @*<td>
-            @Html.DisplayFor(modelItem => item.TVShowID)
-        </td>*@
-    <td>
-        @Html.DisplayFor(modelItem => item.Crime.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Channel_OnlineStream)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.TVShowID }, new { @class = "btn btn-primary" }) 
-        @Html.ActionLink("Details", "Details", new { id = item.TVShowID }, new { @class = "btn btn-warning" }) 
-        @Html.ActionLink("Delete", "Delete", new { id = item.TVShowID }, new { @class = "btn btn-danger" })
-    </td>
-</tr>
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.TVShowID)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Crime.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Channel_OnlineStream)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TVShowID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Details", "Details", new { id = item.TVShowID }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.TVShowID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
     }
 
 </table>

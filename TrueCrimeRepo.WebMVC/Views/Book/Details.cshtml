@@ -7,8 +7,6 @@
 <h2>Book Details</h2>
 
 <div>
-    <h4></h4>
-    <hr />
     <dl class="dl-horizontal">
         @*<dt>
             @Html.DisplayNameFor(model => model.BookID)
@@ -33,15 +31,13 @@
         <dd>
             @Html.DisplayFor(model => model.CrimeID)
         </dd>*@
-
         <dt>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Crime.Title)
         </dd>
-        </br>
+
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -49,7 +45,7 @@
         <dd>
             @Html.DisplayFor(model => model.Title)
         </dd>
-        </br>
+
         <dt>
             @Html.DisplayNameFor(model => model.Description)
         </dt>
@@ -57,7 +53,7 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
-        </br>
+
         <dt>
             @Html.DisplayNameFor(model => model.BookAuthor)
         </dt>
@@ -65,7 +61,7 @@
         <dd>
             @Html.DisplayFor(model => model.BookAuthor)
         </dd>
-        </br>
+
         @*<dt>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </dt>
@@ -83,8 +79,9 @@
         @*</dd>*@
 
     </dl>
+    
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

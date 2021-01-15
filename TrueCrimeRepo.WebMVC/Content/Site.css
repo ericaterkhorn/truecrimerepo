@@ -15,14 +15,20 @@
     padding-right: 15px;
 }
 
+.form-group-lg{
+    padding-bottom: 3px;
+    white-space: normal;
+}
+.dl-horizontal
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
-
+    padding-bottom: 4px;
 }
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 /*input,

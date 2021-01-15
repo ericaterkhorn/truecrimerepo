@@ -92,7 +92,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.BookID == model.BookID && e.UserId == _userID);
+                        .Single(e => e.BookID == model.BookID); /*&& e.UserId == _userID);*/
 
                 entity.Title = model.Title;
                 entity.Description = model.Description;
@@ -110,7 +110,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.BookID == bookID && e.UserId == _userID);
+                        .Single(e => e.BookID == bookID); /*&& e.UserId == _userID);*/
 
                 ctx.Books.Remove(entity);
 

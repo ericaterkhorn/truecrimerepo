@@ -4,12 +4,14 @@
     ViewBag.Title = "Index";
 }
 <img src="~/Images/Edgy Sportswear Etsy Banner.png" style="width: 100%">
-
-<h2>Crimes</h2>
-<p>Find all of our true crimes listed below. </p>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<br/>
+@*<h2>Crimes</h2>*@
+<h3>Find all of our true crimes listed below. </h3>
+<h4 style="color: mediumblue">To view the podcasts, tv shows, and books for the crime, select the blue "Details" box below.</h4>
+<br/>
+<p style="font-size: 30px">
+    <a href='@Url.Action("Create")' class="btn btn-success"> ADD A NEW TRUE CRIME</a>
+    @*@Html.ActionLink("Add a new true crime", "Create")*@
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {<div class="alert alert-success fade in" role="alert">
@@ -23,10 +25,7 @@
 <div class="row">
     <div class="col-md-12">
         <table class="table table-hover">
-            <tr>
-                @*<th>
-            @Html.DisplayNameFor(model => model.CrimeID)
-        </th>*@
+            <tr style="background-color: darkgrey">
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
@@ -34,19 +33,16 @@
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 @*<th>
-            @Html.DisplayNameFor(model => model.Year)
-        </th>*@
+                @Html.DisplayNameFor(model => model.Year)
+                 </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.IsCrimeSolved)
+                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Perpetrator)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Location)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.IsSolved)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.IsCrimeSolved)
                 </th>
                 <th class="col-md-3">
                     To view details, edit, or delete, please click below.
@@ -54,35 +50,26 @@
             </tr>
 
 
-
-
             @foreach (var item in Model.OrderBy(Model=>Model.Title))
             {
-        <tr>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.CrimeID)
-        </td>*@
+            <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
-                @*, "Index", new { sortOrder = ViewBag.TitleSortParm }*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCrimeSolved)
+            </td>
             @*<td>
             @Html.DisplayFor(modelItem => item.Year)
-        </td>*@
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Perpetrator)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsSolved)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCrimeSolved)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
@@ -94,7 +81,7 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
 
             </td>
-        </tr>
+            </tr>
             }
         </table>
 

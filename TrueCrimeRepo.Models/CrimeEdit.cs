@@ -20,7 +20,7 @@ namespace TrueCrimeRepo.Models
         
         public string Location { get; set; }
         
-        public bool IsSolved { get; set; }
+        //public bool IsSolved { get; set; }
 
         public Solved IsCrimeSolved { get; set; }
 

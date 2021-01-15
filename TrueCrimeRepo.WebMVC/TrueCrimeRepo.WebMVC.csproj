@@ -192,6 +192,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\addpocast.png" />
+    <Content Include="Images\addtruecrime.png" />
     <Content Include="Images\Black and White Paper Typography True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Black and White Photo True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Books.png" />

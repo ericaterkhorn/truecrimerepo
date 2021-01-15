@@ -31,6 +31,7 @@ namespace TrueCrimeRepo.Models
 
        
         [Display(Name = "Website URL")]
+        [Url]
         public string WebsiteUrl { get; set; }
 
         //public DateTimeOffset CreatedUtc { get; set; }

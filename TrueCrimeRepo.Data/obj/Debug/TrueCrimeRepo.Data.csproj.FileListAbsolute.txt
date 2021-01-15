@@ -34,3 +34,4 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.bookcreatedutc.resources
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.book.resources
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.yesnodropdown.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.requiredforsolveddropdown.resources

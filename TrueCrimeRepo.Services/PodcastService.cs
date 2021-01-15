@@ -94,7 +94,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Podcasts
-                        .Single(e => e.PodcastID == model.PodcastID && e.UserId == _userID);
+                        .Single(e => e.PodcastID == model.PodcastID); /*&& e.UserId == _userID);*/
 
                 entity.Title = model.Title;
                 entity.Description = model.Description;
@@ -110,7 +110,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Podcasts
-                        .Single(e => e.PodcastID == PodcastID && e.UserId == _userID);
+                        .Single(e => e.PodcastID == PodcastID); /*&& e.UserId == _userID);*/
 
                 ctx.Podcasts.Remove(entity);
 

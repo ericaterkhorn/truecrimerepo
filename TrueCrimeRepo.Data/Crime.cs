@@ -12,13 +12,6 @@ namespace TrueCrimeRepo.Data
 {
     public class Crime
     {
-        //public Crime()
-        //{
-        //    this.CrimePodcasts = new HashSet<Podcast>();
-        //    this.CrimeTVShows = new HashSet<TVShow>();
-        //    this.CrimeBooks = new HashSet<Book>();
-        //}
-       
         [Key]
         public int CrimeID { get; set; }
 
@@ -51,9 +44,11 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Location of the crime")]
         public string Location { get; set; }
 
-        [Display(Name = "Is the crime solved?")]
-        public bool IsSolved { get; set; }
+        //[Display(Name = "Is the crime solved?")]
+        //public bool IsSolved { get; set; }
 
+        [Required]
+        [Display(Name = "Is the crime solved?")]
         public Solved IsCrimeSolved { get; set; }
 
         [Required]
@@ -64,19 +59,6 @@ namespace TrueCrimeRepo.Data
         public virtual ICollection<TVShow> TVShows { get; set; }
         public virtual ICollection<Book> Books { get; set; }
 
-        //public IEnumerable<SelectListItem> Crimes { get; set; }
-        
-
-        //public Crime()
-        //{
-        //    this.Podcasts = new HashSet<Podcast>();
-        //    this.TVShows = new HashSet<TVShow>();
-        //}
-        //public class CrimesRepository
-        //{
-        //    //public ICollection<Crime> Crimes { get; set; }
-        //    public ICollection<SelectListItem> Crimes { get; set; }
-        //}
     }
     public enum Solved
     {

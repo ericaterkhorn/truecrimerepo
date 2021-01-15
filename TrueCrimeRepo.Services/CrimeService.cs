@@ -28,7 +28,7 @@ namespace TrueCrimeRepo.Services
                     //Year = model.Year,
                     Perpetrator = model.Perpetrator,
                     Location = model.Location,
-                    IsSolved = model.IsSolved,
+                    //IsSolved = model.IsSolved,
                     IsCrimeSolved = model.IsCrimeSolved,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -57,7 +57,7 @@ namespace TrueCrimeRepo.Services
                                     //Year = e.Year,
                                     Perpetrator = e.Perpetrator,
                                     Location = e.Location,
-                                    IsSolved = e.IsSolved,
+                                    //IsSolved = e.IsSolved,
                                     IsCrimeSolved = e.IsCrimeSolved,
                                     Podcasts = e.Podcasts,
                                     TVShows = e.TVShows,
@@ -85,7 +85,7 @@ namespace TrueCrimeRepo.Services
                         //Year = entity.Year,
                         Perpetrator = entity.Perpetrator,
                         Location = entity.Location,
-                        IsSolved = entity.IsSolved,
+                        //IsSolved = entity.IsSolved,
                         IsCrimeSolved = entity.IsCrimeSolved,
                         Podcasts = entity.Podcasts,
                         TVShows = entity.TVShows,
@@ -100,13 +100,13 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.CrimeID == model.CrimeID && e.UserId == _userID);
+                        .Single(e => e.CrimeID == model.CrimeID); /*&& e.UserId == _userID);*/
 
                 entity.Title = model.Title;
                 entity.Description = model.Description;
                 entity.Perpetrator = model.Perpetrator;
                 entity.Location = model.Location;
-                entity.IsSolved = model.IsSolved;
+                //entity.IsSolved = model.IsSolved;
                 entity.IsCrimeSolved = model.IsCrimeSolved;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
@@ -120,7 +120,7 @@ namespace TrueCrimeRepo.Services
                 var entity =
                     ctx
                         .Crimes
-                        .Single(e => e.CrimeID == crimeID && e.UserId == _userID);
+                        .Single(e => e.CrimeID == crimeID); /*&& e.UserId == _userID);*/
 
                 ctx.Crimes.Remove(entity);
 

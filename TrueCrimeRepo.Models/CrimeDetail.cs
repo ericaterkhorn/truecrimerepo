@@ -19,9 +19,9 @@ namespace TrueCrimeRepo.Models
         public string Perpetrator { get; set; }
         [Display(Name = "Location of the crime")]
         public string Location { get; set; }
-        [Display(Name = "Is the crime solved?")]
-        public bool IsSolved { get; set; }
+        //public bool IsSolved { get; set; }
 
+        [Display(Name = "Is the crime solved?")]
         public Solved IsCrimeSolved { get; set; }
 
         [Display(Name = "Created")]
