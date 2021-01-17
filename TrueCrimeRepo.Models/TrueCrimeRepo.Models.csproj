@@ -71,6 +71,8 @@
     <Compile Include="CrimeDetail.cs" />
     <Compile Include="CrimeEdit.cs" />
     <Compile Include="CrimeListItem.cs" />
+    <Compile Include="PerpetratorCreate.cs" />
+    <Compile Include="PerpetratorListItem.cs" />
     <Compile Include="PodcastCreate.cs" />
     <Compile Include="PodcastDetail.cs" />
     <Compile Include="PodcastEdit.cs" />

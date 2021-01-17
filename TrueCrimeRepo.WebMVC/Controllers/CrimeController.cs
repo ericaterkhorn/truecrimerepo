@@ -13,7 +13,8 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     [Authorize]
     public class CrimeController : Controller
     {
-        // GET: Crime
+        //private ApplicationDbContext _db = new ApplicationDbContext();
+        //GET: Crime
         public ActionResult Index()
         {
             var userID = User.Identity.GetUserId();
@@ -22,6 +23,41 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
             return View(model);
         }
+
+        //public ActionResult Index(string sortOrder, string searchString)
+        //{
+        //    var userID = User.Identity.GetUserId();
+        //    var service = new CrimeService(userID);
+        //    var model = service.GetCrimes();
+
+
+        //    ViewBag.CrimeSortParm = String.IsNullOrEmpty(sortOrder) ? "Title" : "";
+        //    //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+        //    var crimes = from s in _db.Crimes
+        //                       select s;
+
+        //    if (!String.IsNullOrEmpty(searchString))
+        //    {
+        //        crimes = crimes.Where(s => s.Title.Contains(searchString));
+
+        //    }
+        //    switch (sortOrder)
+        //    {
+        //        case "Title":
+        //            crimes = crimes.OrderByDescending(s => s.Title);
+        //            break;
+        //            //case "Date":
+        //            //    students = students.OrderBy(s => s.EnrollmentDate);
+        //            //    break;
+        //            //case "date_desc":
+        //            //    students = students.OrderByDescending(s => s.EnrollmentDate);
+        //            //    break;
+        //            //default:
+        //            //    students = students.OrderBy(s => s.LastName);
+        //            //    break;
+        //    }
+        //    return View(crimes.ToList());
+        //}
 
         public ActionResult Create()
         {

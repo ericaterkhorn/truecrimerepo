@@ -38,7 +38,11 @@
                     {
                         <li>@Html.ActionLink("Books", "Index", "Book")</li>
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Perpetrators", "Index", "Perpetrator")</li>
+                    }
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
