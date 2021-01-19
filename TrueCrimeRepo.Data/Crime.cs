@@ -37,6 +37,10 @@ namespace TrueCrimeRepo.Data
 
         [MinLength(4, ErrorMessage = "Please provide the full name (first and last) of the perpetrator.")]
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]
+        //[ForeignKey("Perpetrator")]
+        //public int PerpetratorID { get; set; }
+        //public virtual Perpetrator Perpetrator{ get; set; }
+
         public string Perpetrator { get; set; }
 
         [MaxLength(50, ErrorMessage = "Please limit your location to 50 characters.")]
@@ -58,6 +62,8 @@ namespace TrueCrimeRepo.Data
         public virtual ICollection<Podcast> Podcasts { get; set; }
         public virtual ICollection<TVShow> TVShows { get; set; }
         public virtual ICollection<Book> Books { get; set; }
+
+        //public virtual ICollection<Perpetrator> Perpetrators { get; set; }
 
     }
     public enum Solved

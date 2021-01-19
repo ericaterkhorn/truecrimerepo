@@ -59,5 +59,41 @@ namespace TrueCrimeRepo.Services
                 return query.ToArray();
             }
         }
+        public PerpetratorDetail GetPerpetratorByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Perpetrators
+                        .Single(e => e.PerpetratorID == id); /*&& e.OwnerId == _userId*/
+                return
+                    new PerpetratorDetail
+                    {
+                        PerpetratorID = entity.PerpetratorID,
+                        CrimeID = entity.CrimeID,
+                        Crime = entity.Crime,
+                        Name = entity.Name,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
+
+        public bool UpdatePerpetrator(PerpetratorEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Perpetrators
+                        .Single(e => e.PerpetratorID == model.PerpetratorID); /*&& e.OwnerId == _userId);*/
+
+                entity.Name = model.Name;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

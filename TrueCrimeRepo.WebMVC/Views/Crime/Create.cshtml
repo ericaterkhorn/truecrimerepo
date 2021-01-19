@@ -46,7 +46,13 @@
                 @Html.ValidationMessageFor(model => model.Year, "", new { @class = "text-danger" })
             </div>
         </div>*@
-
+    <div class="form-group">
+        @Html.LabelFor(model => model.Perpetrator, "Perpetrator", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-8">
+            @Html.DropDownListFor(model => model.PerpetratorID, new SelectList(ViewBag.Perpetrators, "PerpetratorID", "Name"), "Select Perpetrator")
+            @Html.ValidationMessageFor(model => model.PerpetratorID, "", new { @class = "text-danger" })
+        </div>
+    </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Perpetrator, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-6">

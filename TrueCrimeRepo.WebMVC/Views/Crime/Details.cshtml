@@ -9,7 +9,7 @@
 <div>
     <h4></h4>
     <hr />
-    <dl class="form-group-lg" style="padding-bottom: 10px">
+    <dl class="form-group-lg" style="padding: 10px">
             @*<dt>
                 @Html.DisplayNameFor(model => model.CrimeID)
             </dt>*@
@@ -77,24 +77,22 @@
             <dd>
                 @foreach (var podcast in Model.Podcasts)
                 {
-                    @Html.DisplayFor(model => podcast.Title)   
-                    @Html.DisplayFor(model => podcast.WebsiteUrl)
+                    @Html.DisplayFor(model => podcast.Title) <b></b> @Html.DisplayFor(model => podcast.WebsiteUrl)  
+                    @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
                     <br />
                 }
 
             </dd>
 
-            <dt style="white-space: normal;">
+            <dt>
                 @Html.DisplayNameFor(model => model.TVShows)
             </dt>
             <dd>
                 @foreach (var tvshow in Model.TVShows)
                 {
-                    @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
-                    <br />
+                    @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
                 }
             </dd>
-
             <dt>
                 @Html.DisplayNameFor(model => model.Books)
             </dt>

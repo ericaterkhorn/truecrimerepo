@@ -5,28 +5,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Data;
 
-namespace TrueCrimeRepo.Data
+namespace TrueCrimeRepo.Models
 {
-    public class Perpetrator
+    public class PerpetratorDetail
     {
-        [Key]
         public int PerpetratorID { get; set; }
-        [Required]
         
-        [Display(Name = "Perpetrator Name")]
-        public string Name { get; set; }
-
         [ForeignKey("Crime")]
         public int CrimeID { get; set; }
         public virtual Crime Crime { get; set; }
-
-        public string UserId { get; set; }
-        [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set; }
-
-        [Required]
+       
+        [Display(Name = "Perpetrator Name")]
+        public string Name { get; set; }
+       
         public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

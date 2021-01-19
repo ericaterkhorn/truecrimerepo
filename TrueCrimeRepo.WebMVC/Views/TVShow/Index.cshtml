@@ -5,10 +5,12 @@
 }
 
 <img src="~/Images/TV.png" style="width: 100%" />
-<h2>True Crime TV Shows/Documentaries</h2>
+@*<h2>True Crime TV Shows/Documentaries</h2>*@
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+<br />
+    <a href='@Url.Action("Create")' class="btn btn-success"> ADD A TV SHOW TO A TRUE CRIME</a>
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
