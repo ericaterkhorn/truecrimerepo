@@ -193,13 +193,16 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\AddBook.png" />
+    <Content Include="Images\AddPerpetrator.png" />
     <Content Include="Images\addpocast.png" />
     <Content Include="Images\addtruecrime.png" />
     <Content Include="Images\AddTV.png" />
     <Content Include="Images\Black and White Paper Typography True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Black and White Photo True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Books.png" />
+    <Content Include="Images\crimedetails.png" />
     <Content Include="Images\Edgy Sportswear Etsy Banner.png" />
+    <Content Include="Images\Perpetrator.png" />
     <Content Include="Images\Podcasts.png" />
     <Content Include="Images\TV.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -274,6 +277,7 @@
     <Content Include="Views\Perpetrator\Create.cshtml" />
     <Content Include="Views\Perpetrator\Details.cshtml" />
     <Content Include="Views\Perpetrator\Edit.cshtml" />
+    <Content Include="Views\Perpetrator\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

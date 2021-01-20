@@ -78,6 +78,11 @@
     <Compile Include="Book.cs" />
     <Compile Include="Crime.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202101190114573_remove foreign key perpetrator.cs" />
+    <Compile Include="Migrations\202101190114573_remove foreign key perpetrator.Designer.cs">
+      <DependentUpon>202101190114573_remove foreign key perpetrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Perpetrator.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +91,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101190114573_remove foreign key perpetrator.resx">
+      <DependentUpon>202101190114573_remove foreign key perpetrator.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

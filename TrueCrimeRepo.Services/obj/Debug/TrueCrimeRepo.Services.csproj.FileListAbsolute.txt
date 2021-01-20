@@ -1,5 +1,3 @@
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csprojAssemblyReference.cache
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\TrueCrimeRepo.Services.dll.config
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\TrueCrimeRepo.Services.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\TrueCrimeRepo.Services.pdb
@@ -16,6 +14,8 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\EntityFram
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Services\obj\Debug\TrueCrimeRepo.Services.pdb

@@ -40,9 +40,10 @@ namespace TrueCrimeRepo.Data
         public DbSet<TVShow> TVShows { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Perpetrator> Perpetrators { get; set; }
-        public virtual ICollection<Podcast> CrimePodcasts { get; set; }
-        public virtual ICollection<TVShow> CrimeTVShows { get; set; }
-        public virtual ICollection<Book> CrimeBooks { get; set; }
+        //public virtual ICollection<Podcast> CrimePodcasts { get; set; }
+        //public virtual ICollection<TVShow> CrimeTVShows { get; set; }
+        //public virtual ICollection<Book> CrimeBooks { get; set; }
+        //public virtual ICollection<Perpetrator> CrimePerpetrators { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

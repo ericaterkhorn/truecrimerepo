@@ -39,7 +39,7 @@ namespace TrueCrimeRepo.Data
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]
         //[ForeignKey("Perpetrator")]
         //public int PerpetratorID { get; set; }
-        //public virtual Perpetrator Perpetrator{ get; set; }
+        //public virtual Perpetrator Perpetrator { get; set; }
 
         public string Perpetrator { get; set; }
 
@@ -71,6 +71,8 @@ namespace TrueCrimeRepo.Data
         Yes,
         No
     }
+
+
 }
 
 

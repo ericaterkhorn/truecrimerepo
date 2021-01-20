@@ -95,5 +95,19 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeletePerpetrator(int perpetratorID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Perpetrators
+                        .Single(e => e.PerpetratorID == perpetratorID); /*&& e.OwnerId == _userId);*/
+
+                ctx.Perpetrators.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

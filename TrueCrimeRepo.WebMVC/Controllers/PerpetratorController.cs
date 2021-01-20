@@ -101,6 +101,27 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             ModelState.AddModelError("", "Your perpetrator could not be updated.");
             return View(model);
         }
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreatePerpetratorService();
+            var model = svc.GetPerpetratorByID(id);
+
+            return View(model);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePerpetrator(int id)
+        {
+            var service = CreatePerpetratorService();
+
+            service.DeletePerpetrator(id);
+
+            TempData["SaveResult"] = "Your perpetrator was deleted";
+
+            return RedirectToAction("Index");
+        }
         private PerpetratorService CreatePerpetratorService()
         {
             var userID = User.Identity.GetUserId();

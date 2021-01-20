@@ -4,8 +4,9 @@
     ViewBag.Title = "Index";
 }
 
+<img src="~/Images/Perpetrator.png" style="width: 100%" />
 @*<h2>Index</h2>*@
-<a href='@Url.Action("Create")' class="btn btn-success"> ADD A PERPETRATOR TO A TRUE CRIME</a>
+@*<a href='@Url.Action("Create")' class="btn btn-success"> ADD A PERPETRATOR TO A TRUE CRIME</a>*@
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
@@ -35,9 +36,9 @@
         @*<th>
             @Html.DisplayNameFor(model => model.CrimeID)
         </th>*@
-        <th class="col-md-8">
+        @*<th class="col-md-8">
             To view details, edit, or delete, please click below.
-        </th>
+        </th>*@
     </tr>
 
     @foreach (var item in Model)
@@ -45,11 +46,12 @@
         <tr>
             @*<td>
                     @Html.DisplayFor(modelItem => item.PerpetratorID)
-                </td>*@
+            </td>*@
             <td>
-                <a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a>
+               @Html.DisplayFor(modelItem => item.Crime.Title)
             </td>
             <td>
+                @*<a href="@Url.Action("Details", "Crime", new {id = item.PerpetratorID})">@Html.DisplayFor(modelItem = item.Name)</a>*@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             @*<td>

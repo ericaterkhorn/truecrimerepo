@@ -13,7 +13,7 @@ namespace TrueCrimeRepo.Data
         [Key]
         public int PerpetratorID { get; set; }
         [Required]
-        
+
         [Display(Name = "Perpetrator Name")]
         public string Name { get; set; }
 

@@ -29,9 +29,10 @@ namespace TrueCrimeRepo.Models
         [MinLength(4, ErrorMessage = "Please provide the full name (first and last) of the perpetrator.")]
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]
         [Display(Name = "If the crime is solved, enter the first and last name of the perpetrator. If unknown, please list 'unknown'.")]
-        [ForeignKey("Perpetrator")]
-        public int PerpetratorID { get; set; }
-        public virtual Perpetrator Perpetrator { get; set; }
+        public string Perpetrator { get; set; }
+        //[ForeignKey("Perpetrator")]
+        //public int PerpetratorID { get; set; }
+        //public virtual Perpetrator Perpetrator { get; set; }
 
         [MaxLength(50, ErrorMessage = "Please limit your location to 50 characters.")]
         [MinLength(5, ErrorMessage = "Please add additional information.")]
@@ -40,6 +41,20 @@ namespace TrueCrimeRepo.Models
 
         [Display(Name = "Is the crime solved? Please select an option.")]
         public Solved IsCrimeSolved { get; set; }
-        
     }
+
+    //public class PerpetratorsList
+    //{
+    //    protected override void Seed(Perpetrator)
+    //    {
+    //        var perpetrators = new List<Perpetrator>
+    //        {
+    //            new Perpetrator{Name="Ted Bundy"},
+    //            new Perpetrator{Name="John Wayne Gacy"}
+    //        };
+    //        perpetrators.ForEach(s => ApplicationDbContext.Perpetrators.Add(s));
+    //        App.SaveChanges();
+
+    //    }
+    //}
 }
