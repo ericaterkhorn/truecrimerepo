@@ -1,12 +1,13 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+ 
 }
-/*
+/**/
 .jumbotron{
     width: 200px;
     height: 30vh;
-}*/
+}
 
 
 /* Set padding to keep content from hitting the edges */
@@ -19,7 +20,9 @@
     padding-bottom: 3px;
     white-space: normal;
 }
-.dl-horizontal
+.form-group-lg{
+    font-size: 16px;
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 

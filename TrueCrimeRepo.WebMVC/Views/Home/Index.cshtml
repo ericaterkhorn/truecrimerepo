@@ -1,49 +1,62 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<br/>
-<br/>
-<img src="~/images/Black and White Photo True Crime & Investigative Journalism Podcast Cover.png" alt="homepage Photo" style="height: 500px" width="500" align="left" />
-<!--<div class="jumbotron">
-@*<h1>True Crime Repo</h1>*@
-@*<p class="lead">The go-to resource for all true crime fanatics to find the best media around their favorite true crimes.</p>*@
-@*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+<br />
+<br />
 
-</div>-->
+<div class="container">
+
+    <div class="homepage image">
+        <img src="~/images/Black and White Photo True Crime & Investigative Journalism Podcast Cover.png" alt="homepage Photo" style="height: 50vh">
+    </div>
 
 
-<div class="row">
-    <div class="col-md-6">
-        <p style="display: inline-block"><a class="btn alert-info"@Html.ActionLink("For full access to the site, please register an account or login.", "Register", "Account")</a></p>
-        <h2>True Crimes</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <!--<div class="jumbotron">
+    @*<h1>True Crime Repo</h1>*@
+    @*<p class="lead">The go-to resource for all true crime fanatics to find the best media around their favorite true crimes.</p>*@
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+
+    </div>-->
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <br/>
+            <p style="display: inline-block"><a class="btn alert-info" @Html.ActionLink("For full access to the site, please register an account or login.", "Register", "Account")</a></p>
+            <h2>True Crimes</h2>
+            <p>
+                The go-to resource for all true crime fanatics and arm chair sleuths to find the best and most up-to-date media around their favorite true crimes.
+                <br />
+            </p>
+            <p><i><a class="btn btn-danger" a href="Crime">Search here <i class="fas fa-search-plus"></i></a></p>
             <br />
-        </p>
-        <p><a class="btn btn-info" a href="Crime">Search here &raquo;</a></p>
-        <br />
+
+        </div>
+        <div class="col-md-3">
+                <h2>Podcasts</h2>
+                <p></p>
+                <p><a class="btn btn-warning" a href="Podcast">Search here &raquo;</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>TV Shows</h2>
+                <p></p>
+                <p><a class="btn btn-warning" a href="TVShow">Search here &raquo;</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Books</h2>
+                <p></p>
+                <p><a class="btn btn-warning" a href="Book">Search here  &raquo;</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Perpetrators</h2>
+                <p></p>
+                <p><a class="btn btn-warning" a href="Perpetrator">Search here  &raquo;</a></p>
+            </div>
 
     </div>
-    <div class="col-md-3">
-        <h2>Podcasts</h2>
-        <p></p>
-        <p><a class="btn btn-warning" a href="Podcast">Search here &raquo;</a></p>
-    </div>
-    <div class="col-md-3">
-        <h2>TV Shows</h2>
-        <p></p>
-        <p><a class="btn btn-warning" a href="TVShow">Search here &raquo;</a></p>
-    </div>
-    <div class="col-md-3">
-        <h2>Books</h2>
-        <p></p>
-        <p><a class="btn btn-warning" a href="Book">Search here  &raquo;</a></p>
-    </div>
-    <div class="col-md-3">
-        <h2>Perpetrators</h2>
-        <p></p>
-        <p><a class="btn btn-warning" a href="Perpetrator">Search here  &raquo;</a></p>
-    </div>
-
-
 </div>
+
+
+
+
+

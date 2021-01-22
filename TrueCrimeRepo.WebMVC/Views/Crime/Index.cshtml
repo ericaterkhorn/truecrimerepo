@@ -7,10 +7,12 @@
 <br/>
 @*<h2>Crimes</h2>*@
 <h3>Find all of our true crimes listed below. </h3>
-<h4 style="color: mediumblue">To view the podcasts, tv shows, and books for the crime, select the blue "Details" box below.</h4>
+<h4 style="color: white">To view the podcasts, tv shows, and books for the crime, select the blue "Details" box below.</h4>
 <br/>
 <p style="font-size: 30px">
-    <a href='@Url.Action("Create")' class="btn btn-success"> ADD A NEW TRUE CRIME</a>
+    <a href='@Url.Action("Create")' class="btn btn-danger">
+        <i class="fas fa-plus"></i> &nbsp; ADD a new true crime  
+    </a>
     @*@Html.ActionLink("Add a new true crime", "Create")*@
 </p>
 @if (TempData.ContainsKey("SaveResult"))
@@ -25,10 +27,10 @@
 <div class="row">
     <div class="col-md-12">
         <table class="table table-hover">
-            <tr style="background-color: darkgrey">
+            <tr style="background-color: darkslategrey">
                 @*<th>
-                    @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.CrimeSortParm})
-                </th>*@
+                        @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.CrimeSortParm})
+                    </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
@@ -36,8 +38,8 @@
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 @*<th>
-                @Html.DisplayNameFor(model => model.Year)
-                 </th>*@
+                    @Html.DisplayNameFor(model => model.Year)
+                     </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.IsCrimeSolved)
                 </th>
@@ -53,42 +55,52 @@
             </tr>
 
 
-            @foreach (var item in Model.OrderBy(Model=>Model.Title))
+            @foreach (var item in Model.OrderBy(Model => Model.Title))
             {
-            <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCrimeSolved)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Year)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Perpetrator)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
+                <tr style="background-color: dimgrey">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsCrimeSolved)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Perpetrator)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
 
 
-                @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-primary" })
 
 
-                @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
 
-            </td>
-            </tr>
+                    </td>
+                </tr>
             }
         </table>
 
     </div>
+
+    <ul class="pagination">
+        <li class="disabled"><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
 </div>
 
 <style type="text/css">
