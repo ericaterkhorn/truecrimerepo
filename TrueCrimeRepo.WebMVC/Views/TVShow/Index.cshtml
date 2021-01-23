@@ -9,7 +9,7 @@
 
 <p>
 <br />
-    <a href='@Url.Action("Create")' class="btn btn-success"> ADD A TV SHOW TO A TRUE CRIME</a>
+    <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> ADD a tv show to a true crime</a>
     @*@Html.ActionLink("Create New", "Create")*@
 </p>
 @if (TempData.ContainsKey("SaveResult"))
@@ -23,7 +23,7 @@
     </div>
 }
 <table class="table table-hover">
-    <tr style="background-color: darkgrey">
+    <tr style="background-color: darkslategray">
         @*<th>
                 @Html.DisplayNameFor(model => model.TVShowID)
             </th>*@
@@ -31,8 +31,7 @@
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
-
+            @Html.DisplayNameFor(model => model.Title) <i class="fas fa-tv"></i>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -47,7 +46,7 @@
 
     @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
-        <tr>
+        <tr style="background-color: dimgrey">
             @*<td>
                     @Html.DisplayFor(modelItem => item.TVShowID)
                 </td>*@

@@ -35,9 +35,9 @@
     <div class="panel-heading">
         <h3 class="panel-title">Podcasts &nbsp;<i class="fas fa-podcast"></i></h3>
     </div>
-    @foreach (var podcast in Model.Podcasts)
+    @foreach (var podcast in Model.Podcasts.OrderBy(Model =>Model.Title))
     {
-        @Html.DisplayFor(model => podcast.Title) <b></b>  @Html.DisplayFor(model => podcast.WebsiteUrl)
+        @Html.DisplayFor(model => podcast.Title)<b></b>  @Html.DisplayFor(model => podcast.WebsiteUrl)
         @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
         <br />
         <br/>
@@ -50,7 +50,7 @@
             TV Shows  &nbsp; <i class="fas fa-tv"></i>
         </h3>
     </div>
-    @foreach (var tvshow in Model.TVShows)
+    @foreach (var tvshow in Model.TVShows.OrderBy(Model => Model.Title))
     {
         @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
         <br />
@@ -64,7 +64,7 @@
             Books &nbsp; <i class="fas fa-book"></i>
         </h3>
     </div>
-    @foreach (var book in Model.Books)
+    @foreach (var book in Model.Books.OrderBy(Model => Model.Title))
     {
         @Html.DisplayFor(model => book.Title)
         <br />
