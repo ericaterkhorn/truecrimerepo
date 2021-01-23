@@ -202,10 +202,16 @@
     <Content Include="Images\Black and White Paper Typography True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Black and White Photo True Crime &amp; Investigative Journalism Podcast Cover.png" />
     <Content Include="Images\Books.png" />
+    <Content Include="Images\Carouselpodcastcorrect.png" />
+    <Content Include="Images\Christopherwatts.png" />
     <Content Include="Images\crimedetails.png" />
     <Content Include="Images\Edgy Sportswear Etsy Banner.png" />
+    <Content Include="Images\Homepagecover.png" />
+    <Content Include="Images\homepageimage.png" />
     <Content Include="Images\Perpetrator.png" />
+    <Content Include="Images\Podcastcarousel.png" />
     <Content Include="Images\Podcasts.png" />
+    <Content Include="Images\Recently AddedMichaelPeterson.png" />
     <Content Include="Images\TV.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
