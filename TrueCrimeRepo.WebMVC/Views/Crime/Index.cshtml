@@ -34,13 +34,13 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
-                <th>
+                <th class="col-md-4">
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 @*<th>
                     @Html.DisplayNameFor(model => model.Year)
                      </th>*@
-                <th>
+                <th class="col-md-1">
                     @Html.DisplayNameFor(model => model.IsCrimeSolved)
                 </th>
                 <th>
@@ -77,11 +77,8 @@
                         @Html.DisplayFor(modelItem => item.Location)
                     </td>
                     <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-info" })
                         @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
-
-
-                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-primary" })
-
 
                         @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
 

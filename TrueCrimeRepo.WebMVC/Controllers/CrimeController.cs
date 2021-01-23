@@ -24,37 +24,16 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
-        //public ActionResult Index(string sortOrder, string searchString)
+        //public ActionResult Index(string Sorting_Order)
         //{
-        //    var userID = User.Identity.GetUserId();
-        //    var service = new CrimeService(userID);
-        //    var model = service.GetCrimes();
-
-
-        //    ViewBag.CrimeSortParm = String.IsNullOrEmpty(sortOrder) ? "Title" : "";
-        //    //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
-        //    var crimes = from s in _db.Crimes
-        //                       select s;
-
-        //    if (!String.IsNullOrEmpty(searchString))
-        //    {
-        //        crimes = crimes.Where(s => s.Title.Contains(searchString));
-
-        //    }
-        //    switch (sortOrder)
+        //    ViewBag.SortingName = String.IsNullOrEmpty(Sorting_Order) ? "Title" : "";
+        //    var crimes = from crime in ApplicationDbContext select crime;
+        //    switch (Sorting_Order)
         //    {
         //        case "Title":
-        //            crimes = crimes.OrderByDescending(s => s.Title);
+        //            crimes = crimes.OrderByDescending(crime => crime.Title);
         //            break;
-        //            //case "Date":
-        //            //    students = students.OrderBy(s => s.EnrollmentDate);
-        //            //    break;
-        //            //case "date_desc":
-        //            //    students = students.OrderByDescending(s => s.EnrollmentDate);
-        //            //    break;
-        //            //default:
-        //            //    students = students.OrderBy(s => s.LastName);
-        //            //    break;
+
         //    }
         //    return View(crimes.ToList());
         //}
@@ -98,6 +77,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
                     CrimeID = detail.CrimeID,
                     Title = detail.Title,
                     Description = detail.Description,
+                    Perpetrator = detail.Perpetrator,
                     //Perpetrator = detail.Perpetrators,
                     Location = detail.Location,
                     //IsSolved = detail.IsSolved,
