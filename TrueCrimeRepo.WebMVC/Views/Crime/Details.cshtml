@@ -15,16 +15,16 @@
         @Html.DisplayFor(model => model.Description)
         <br />
 
-        @Html.DisplayNameFor(model => model.Perpetrator): &nbsp;
+        <b></b>@Html.DisplayNameFor(model => model.Perpetrator): &nbsp;
 
         @Html.DisplayFor(model => model.Perpetrator)
         <br />
-        @Html.DisplayNameFor(model => model.Location) : &nbsp;
+        <b>@Html.DisplayNameFor(model => model.Location) : &nbsp;</b>
 
         @Html.DisplayFor(model => model.Location)
         <br />
 
-        @Html.DisplayNameFor(model => model.IsCrimeSolved) : &nbsp;
+        <b>@Html.DisplayNameFor(model => model.IsCrimeSolved) : &nbsp;</b>
 
         @Html.DisplayFor(model => model.IsCrimeSolved)
 
@@ -33,32 +33,49 @@
 
 <div class="panel panel-danger">
     <div class="panel-heading">
-        <h3 class="panel-title">Podcasts</h3>
+        <h3 class="panel-title">Podcasts &nbsp;<i class="fas fa-podcast"></i></h3>
     </div>
     @foreach (var podcast in Model.Podcasts)
     {
         @Html.DisplayFor(model => podcast.Title) <b></b>  @Html.DisplayFor(model => podcast.WebsiteUrl)
         @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
         <br />
+        <br/>
     }
 
 </div>
 <div class="panel panel-danger">
     <div class="panel-heading">
-        <h3 class="panel-title">TV Shows</h3>
+        <h3 class="panel-title">
+            TV Shows  &nbsp; <i class="fas fa-tv"></i>
+        </h3>
     </div>
+    @foreach (var tvshow in Model.TVShows)
+    {
+        @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
+        <br />
+        <br />
+    }
 
 </div>
 <div class="panel panel-danger">
     <div class="panel-heading">
-        <h3 class="panel-title">Books</h3>
+        <h3 class="panel-title">
+            Books &nbsp; <i class="fas fa-book"></i>
+        </h3>
     </div>
+    @foreach (var book in Model.Books)
+    {
+        @Html.DisplayFor(model => book.Title)
+        <br />
+        <br/>
+    }
 
 </div>
 <div>
     <h4></h4>
     <hr />
-    <dl class="form-group-lg">
+    @*<dl class="form-group-lg">*@
         @*<dt>
                 @Html.DisplayNameFor(model => model.CrimeID)
             </dt>*@
@@ -81,7 +98,7 @@
             @Html.DisplayFor(model => model.Description)
         </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Perpetrator)
         </dt>
 
@@ -102,7 +119,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.IsCrimeSolved)
-        </dd>
+        </dd>*@
 
         @*<dt>
                 @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -120,16 +137,16 @@
                 @Html.DisplayFor(model => model.ModifiedUtc)
             </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Podcasts)
         </dt>
         <dd>
             @foreach (var podcast in Model.Podcasts)
             {
-                @Html.DisplayFor(model => podcast.Title) <b></b> @Html.DisplayFor(model => podcast.WebsiteUrl)
+                @Html.DisplayFor(model => podcast.Title) <b></b> @Html.DisplayFor(model => podcast.WebsiteUrl)*@
                 @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
-                <br />
-            }
+                @*<br />*@
+            @*}
 
         </dd>
 
@@ -152,7 +169,7 @@
                 <br />
             }
         </dd>
-    </dl>
+    </dl>*@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using TrueCrimeRepo.Data;
@@ -13,9 +15,9 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     [Authorize]
     public class CrimeController : Controller
     {
-        //private ApplicationDbContext _db = new ApplicationDbContext();
-        //GET: Crime
-        public ActionResult Index()
+    //    private ApplicationDbContext _db = new ApplicationDbContext();
+    //GET: Crime
+    public ActionResult Index()
         {
             var userID = User.Identity.GetUserId();
             var service = new CrimeService(userID);
@@ -24,10 +26,25 @@ namespace TrueCrimeRepo.WebMVC.Controllers
             return View(model);
         }
 
+        //public ActionResult Index(string searchString)
+        //{
+        //    var movies = from m in _db.Crimes
+        //                 select m;
+
+        //    if (!String.IsNullOrEmpty(searchString))
+        //    {
+        //        movies = movies.Where(s => s.Title.Contains(searchString));
+        //    }
+
+        //    return View(db.Title.Where());
+        //}
         //public ActionResult Index(string Sorting_Order)
         //{
+        //    var userID = User.Identity.GetUserId();
+        //    var service = new CrimeService(userID);
+        //    var model = service.GetCrimes();
         //    ViewBag.SortingName = String.IsNullOrEmpty(Sorting_Order) ? "Title" : "";
-        //    var crimes = from crime in ApplicationDbContext select crime;
+        //    var crimes = from crime in _db.Crimes select crime;
         //    switch (Sorting_Order)
         //    {
         //        case "Title":
@@ -37,6 +54,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         //    }
         //    return View(crimes.ToList());
         //}
+
 
         public ActionResult Create()
         {

@@ -213,6 +213,7 @@
     <Content Include="Images\Podcasts.png" />
     <Content Include="Images\Recently AddedMichaelPeterson.png" />
     <Content Include="Images\TV.png" />
+    <Content Include="Images\updatedhomepageimage.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

@@ -52,7 +52,7 @@
                     @Html.DisplayFor(modelItem => item.TVShowID)
                 </td>*@
             <td>
-                <a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a>
+                <u><a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a></u>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)

@@ -24,7 +24,7 @@
 }
 
 <table class="table table-hover">
-    <tr style="background-color: darkgrey">
+    <tr style="background-color: darkslategray">
         @*<th>
                 @Html.DisplayNameFor(model => model.PodcastID)
             </th>*@
@@ -35,10 +35,10 @@
                 @Html.DisplayNameFor(model => model.CrimeID)
             </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Crime.Title)
+            @Html.DisplayNameFor(model => model.Crime.Title) 
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Title) &nbsp;<i class="fas fa-podcast"></i>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -61,7 +61,7 @@
 
     @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
-        <tr>
+        <tr style="background-color: dimgrey">
             @*<td>
                     @Html.DisplayFor(modelItem => item.PodcastID)
                 </td>*@
@@ -73,7 +73,7 @@
                 </td>*@
             <td>
                 @*@Html.DisplayFor(modelItem => item.Crime.Title)*@
-                <a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a>
+                <u><a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a></u>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
@@ -98,7 +98,7 @@
 
                 @Html.ActionLink("Delete", "Delete", new { id = item.PodcastID }, new { @class = "btn btn-danger" })
             </td>
-        </tr>
+        </tr="background-color:>
     }
 
 </table>
