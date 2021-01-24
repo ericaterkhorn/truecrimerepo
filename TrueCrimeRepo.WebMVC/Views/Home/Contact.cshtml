@@ -4,25 +4,35 @@
 @*<h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>*@
 <h3>Thanks for visiting! To contact the owner of this site, please reach out below.</h3>
-
-<div >
+<br/>
+<br/>
+<div class="form-horizontal col-md-12">
     <form action="https://formspree.io/xgepekjv" method="POST">
-        <label>
-            Your name:
-            <input type="name">
-        </label>
-        <label>
-            Your email address:
-            <input type="text" name="_replyto">
-        </label>
-        <label>
-            Your message:
-            <textarea name="message"></textarea>
-        </label>
-
-        <button type="submit">Send</button>
+            <div class="col-md-12">
+                <label>
+                    Your name:
+                    <input type="name">
+                </label>
+            </div>
+            <div class="col-md-12">
+                <label>
+                    Your email address:
+                    <input type="text" name="_replyto">
+                </label>
+            </div>
+            <div class="col-md-12">
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+            </div>
+            <div class="col-md-12">
+                <button type="submit">Send</button>
+             </div>
     </form>
 </div>
+ 
+
 <address>
     @*<h4>Erica Terkhorn</h4>
     <h4>erica.terkhorn@gmail.com</h4>

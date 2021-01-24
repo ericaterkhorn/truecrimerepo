@@ -15,9 +15,9 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     [Authorize]
     public class CrimeController : Controller
     {
-    //    private ApplicationDbContext _db = new ApplicationDbContext();
-    //GET: Crime
-    public ActionResult Index()
+        //private ApplicationDbContext _db = new ApplicationDbContext();
+        //GET: Crime
+        public ActionResult Index()
         {
             var userID = User.Identity.GetUserId();
             var service = new CrimeService(userID);
@@ -28,16 +28,19 @@ namespace TrueCrimeRepo.WebMVC.Controllers
 
         //public ActionResult Index(string searchString)
         //{
-        //    var movies = from m in _db.Crimes
-        //                 select m;
+        //    var userID = User.Identity.GetUserId();
+        //    var service = new CrimeService(userID);
+        //    var model = service.GetCrimes();
+        //    var crimes = from s in _db.Crimes
+        //                 select s;
 
         //    if (!String.IsNullOrEmpty(searchString))
         //    {
-        //        movies = movies.Where(s => s.Title.Contains(searchString));
+        //        crimes = crimes.Where(s => s.Title.Contains(searchString));
         //    }
 
-        //    return View(db.Title.Where());
-        //}
+        //    return View(_db.Crimes.ToString());
+    
         //public ActionResult Index(string Sorting_Order)
         //{
         //    var userID = User.Identity.GetUserId();

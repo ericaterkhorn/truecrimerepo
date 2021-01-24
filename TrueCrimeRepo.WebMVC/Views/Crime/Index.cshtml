@@ -7,7 +7,7 @@
 <br/>
 @*<h2>Crimes</h2>*@
 <h3>Find all of our true crimes listed below. </h3>
-<h4 style="color: white">To view the podcasts, tv shows, and books for the crime, select the blue "Details" box below.</h4>
+<h4 style="color: white">To view the podcasts, tv shows, and books for the crime, select "Details" box below.</h4>
 <br/>
 <p style="font-size: 30px">
     <a href='@Url.Action("Create")' class="btn btn-success">
@@ -77,8 +77,8 @@
                         @Html.DisplayFor(modelItem => item.Location)
                     </td>
                     <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-info" })
-                        @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Details", "Details", new { id = item.CrimeID }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CrimeID }, new { @class = "btn btn-default" })
 
                         @Html.ActionLink("Delete", "Delete", new { id = item.CrimeID }, new { @class = "btn btn-danger" })
 
@@ -89,7 +89,7 @@
 
     </div>
 
-    <ul class="pagination">
+    @*<ul class="pagination">
         <li class="disabled"><a href="#">&laquo;</a></li>
         <li class="active"><a href="#">1</a></li>
         <li><a href="#">2</a></li>
@@ -97,16 +97,19 @@
         <li><a href="#">4</a></li>
         <li><a href="#">5</a></li>
         <li><a href="#">&raquo;</a></li>
-    </ul>
+    </ul>*@
 </div>
 
 <style type="text/css">
-    td {
+    .td {
         width: 100px;
+        font: white;
     }
 
-    th {
+    .th {
         width: 100px;
+        font: white;
     }
+
 </style>
 

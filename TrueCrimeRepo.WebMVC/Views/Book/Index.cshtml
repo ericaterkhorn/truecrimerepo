@@ -36,7 +36,7 @@
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Title)   <i class="fas fa-book"></i>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -71,7 +71,7 @@
                 <u><a href="@Url.Action("Details", "Crime", new { id = item.CrimeID })">@Html.DisplayFor(modelItem => item.Crime.Title)</a></u>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Title) <i class="fas fa-book"></i>
+                @Html.DisplayFor(modelItem => item.Title) 
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
@@ -86,8 +86,8 @@
                     @Html.DisplayFor(modelItem => item.ModifiedUtc)
                 </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.BookID }, new { @class = "btn btn-primary" })
-                @Html.ActionLink("Details", "Details", new { id = item.BookID }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Details", "Details", new { id = item.BookID }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Edit", "Edit", new { id = item.BookID }, new { @class = "btn btn-default" })
                 @Html.ActionLink("Delete", "Delete", new { id = item.BookID }, new { @class = "btn btn-danger" })
             </td>
         </tr>

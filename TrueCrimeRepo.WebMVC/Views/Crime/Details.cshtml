@@ -7,15 +7,16 @@
 <img src="~/Images/crimedetails.png" style="width:100%" />
 <br/>
 <br/>
-<div class="panel panel-danger">
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">@Html.DisplayFor(model => model.Title)</h3>
     </div>
     <div class="panel-body">
         @Html.DisplayFor(model => model.Description)
         <br />
+        <br />
 
-        <b></b>@Html.DisplayNameFor(model => model.Perpetrator): &nbsp;
+        <b>@Html.DisplayNameFor(model => model.Perpetrator) : &nbsp;</b>
 
         @Html.DisplayFor(model => model.Perpetrator)
         <br />
@@ -31,51 +32,54 @@
     </div>
 </div>
 
-<div class="panel panel-danger">
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">Podcasts &nbsp;<i class="fas fa-podcast"></i></h3>
     </div>
-    @foreach (var podcast in Model.Podcasts.OrderBy(Model =>Model.Title))
-    {
-        @Html.DisplayFor(model => podcast.Title)<b></b>  @Html.DisplayFor(model => podcast.WebsiteUrl)
-        @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
-        <br />
-        <br/>
-    }
-
-</div>
-<div class="panel panel-danger">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            TV Shows  &nbsp; <i class="fas fa-tv"></i>
-        </h3>
+    <div class="panel-body">
+        @foreach (var podcast in Model.Podcasts.OrderBy(Model => Model.Title))
+        {
+            @Html.DisplayFor(model => podcast.Title) <b>:</b><i> @Html.DisplayFor(model => podcast.WebsiteUrl)</i>
+            @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
+            <br />
+            <br />
+        }
+        </div>
     </div>
-    @foreach (var tvshow in Model.TVShows.OrderBy(Model => Model.Title))
-    {
-        @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
-        <br />
-        <br />
-    }
-
-</div>
-<div class="panel panel-danger">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            Books &nbsp; <i class="fas fa-book"></i>
-        </h3>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                TV Shows  &nbsp; <i class="fas fa-tv"></i>
+            </h3>
+        </div>
+        <div class="panel-body">
+            @foreach (var tvshow in Model.TVShows.OrderBy(Model => Model.Title))
+            {
+                @Html.DisplayFor(model => tvshow.Title) <b>:</b><i> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)</i>
+                <br />
+                <br />
+            }
+        </div>
     </div>
-    @foreach (var book in Model.Books.OrderBy(Model => Model.Title))
-    {
-        @Html.DisplayFor(model => book.Title)
-        <br />
-        <br/>
-    }
-
-</div>
-<div>
-    <h4></h4>
-    <hr />
-    @*<dl class="form-group-lg">*@
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Books &nbsp; <i class="fas fa-book"></i>
+            </h3>
+        </div>
+        <div class="panel-body">
+            @foreach (var book in Model.Books.OrderBy(Model => Model.Title))
+            {
+            <i>@Html.DisplayFor(model => book.Title)</i>
+                <br />
+                <br />
+            }
+        </div>
+    </div>
+    <div>
+        <h4></h4>
+        <hr />
+        @*<dl class="form-group-lg">*@
         @*<dt>
                 @Html.DisplayNameFor(model => model.CrimeID)
             </dt>*@
@@ -84,42 +88,42 @@
                 @Html.DisplayFor(model => model.CrimeID)
             </dd>*@
         @*<dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>*@
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.Perpetrator)
-        </dt>
+                @Html.DisplayNameFor(model => model.Perpetrator)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Perpetrator)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Perpetrator)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IsCrimeSolved)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IsCrimeSolved)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.IsCrimeSolved)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.IsCrimeSolved)
+            </dd>*@
 
         @*<dt>
                 @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -138,43 +142,59 @@
             </dd>*@
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.Podcasts)
-        </dt>
-        <dd>
-            @foreach (var podcast in Model.Podcasts)
-            {
-                @Html.DisplayFor(model => podcast.Title) <b></b> @Html.DisplayFor(model => podcast.WebsiteUrl)*@
-                @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
-                @*<br />*@
-            @*}
+                @Html.DisplayNameFor(model => model.Podcasts)
+            </dt>
+            <dd>
+                @foreach (var podcast in Model.Podcasts)
+                {
+                    @Html.DisplayFor(model => podcast.Title) <b></b> @Html.DisplayFor(model => podcast.WebsiteUrl)*@
+        @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
+        @*<br />*@
+        @*}
 
-        </dd>
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TVShows)
-        </dt>
-        <dd>
-            @foreach (var tvshow in Model.TVShows)
-            {
-                @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
-            }
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Books)
-        </dt>
-        <dd>
-            @foreach (var book in Model.Books)
-            {
-                @Html.DisplayFor(model => book.Title)
-                <br />
-            }
-        </dd>
-    </dl>*@
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TVShows)
+                </dt>
+                <dd>
+                    @foreach (var tvshow in Model.TVShows)
+                    {
+                        @Html.DisplayFor(model => tvshow.Title) <b></b> @Html.DisplayFor(model => tvshow.Channel_OnlineStream)
+                    }
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Books)
+                </dt>
+                <dd>
+                    @foreach (var book in Model.Books)
+                    {
+                        @Html.DisplayFor(model => book.Title)
+                        <br />
+                    }
+                </dd>
+            </dl>*@
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    <style type="text/css">
+        td {
+            width: 100px;
+        }
+
+        th {
+            width: 100px;
+        }
+        .body{
+            color: white;
+            font-size: medium;
+        }
+        .panel-title{
+            font-size: x-large;
+        }
+    </style>
 
 
 

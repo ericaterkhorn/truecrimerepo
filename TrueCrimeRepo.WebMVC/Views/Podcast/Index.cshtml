@@ -8,7 +8,7 @@
 <br/>
 <br/>
 <p style="font-size: 30px">
-    <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> &nbsp; ADD A PODCAST TO A TRUE CRIME</a>
+    <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> &nbsp; ADD a new podcast to a true crime</a>
     @*@Html.ActionLink("Add a new true crime", "Create")*@
 </p>
 
@@ -92,22 +92,28 @@
                 </td>*@
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PodcastID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Details", "Details", new { id = item.PodcastID }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Edit", "Edit", new { id = item.PodcastID }, new { @class = "btn btn-default" })
 
-                @Html.ActionLink("Details", "Details", new { id = item.PodcastID }, new { @class = "btn btn-warning" })
 
                 @Html.ActionLink("Delete", "Delete", new { id = item.PodcastID }, new { @class = "btn btn-danger" })
             </td>
-        </tr="background-color:>
+        </tr>
     }
 
 </table>
 <style type="text/css">
     td {
         width: 100px;
+        font: white;
     }
 
     th {
         width: 100px;
+        font: white;
+    }
+
+    body {
+        color: white;
     }
 </style>
