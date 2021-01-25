@@ -28,7 +28,7 @@ namespace TrueCrimeRepo.Models
 
         [MinLength(4, ErrorMessage = "Please provide the full name (first and last) of the perpetrator.")]
         [MaxLength(50, ErrorMessage = "The name is too long. Please re-enter the first and last name of the perpetrator.")]
-        [Display(Name = "If the crime is solved, enter the first and last name of the perpetrator. If unknown, please list 'unknown'.")]
+        [Display(Name = "If the crime is solved, enter the first and last name of the perpetrator. If unsolved, please list 'unknown'.")]
         public string Perpetrator { get; set; }
         //[ForeignKey("Perpetrator")]
         //public int PerpetratorID { get; set; }

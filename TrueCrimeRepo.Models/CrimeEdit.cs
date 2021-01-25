@@ -22,6 +22,7 @@ namespace TrueCrimeRepo.Models
         
         //public bool IsSolved { get; set; }
 
+        [Display(Name ="Is the crime solved?")]
         public Solved IsCrimeSolved { get; set; }
 
         public virtual ICollection<Podcast> Podcasts { get; set; }

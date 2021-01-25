@@ -5,8 +5,8 @@
 }
 <img src="~/Images/Podcasts.png" style="width: 100%" />
 @*<h2>True Crime Podcasts</h2>*@
-<br/>
-<br/>
+<h3>Find all of our podcasts listed below. </h3>
+<br />
 <p style="font-size: 30px">
     <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> &nbsp; ADD a new podcast to a true crime</a>
     @*@Html.ActionLink("Add a new true crime", "Create")*@
@@ -35,7 +35,7 @@
                 @Html.DisplayNameFor(model => model.CrimeID)
             </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Crime.Title) 
+            @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title) &nbsp;<i class="fas fa-podcast"></i>
@@ -110,7 +110,6 @@
 
     th {
         width: 100px;
-        font: white;
     }
 
     body {
