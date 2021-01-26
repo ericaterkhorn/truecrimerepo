@@ -1,17 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <div class="jumbotron2">
     <div class="container">
-        <a href="Crime"><img src="~/Images/updatedhomepageimage.png" style="width:100%; height: 100%;" /></a>
-        @*<h1>True Crime Repo</h1>
-        <p class="lead">The go-to resource for all true crime fanatics and arm chair sleuths to find the best and up-to-date media around their favorite true crimes.</p>*@
-        @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
-    </div>
         <br/>
+        <br/>
+        <a href="Crime"><img src="~/Images/updatedhomepageimage.png"/></a>
+    </div>
     <br/>
+    <div align="center">
+        <a href='@Url.Action("Login", "Account")' class="btn btn-danger"><h4>To view crimes and associated media, please register for an account or login.</h4></a>
+    </div>
     <br/>
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -23,15 +24,15 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="~/Images/Carouselpodcastcorrect.png" alt="first" style="width:100%;">
+                    <img src="~/Images/Carouselpodcastcorrect.png" alt="first">
                 </div>
 
                 <div class="item">
-                    <img src="~/Images/Christopherwatts.png" alt="second" style="width:100%;">
+                    <img src="~/Images/Christopherwatts.png" alt="second">
                 </div>
 
                 <div class="item">
-                    <img src="~/Images/Recently AddedMichaelPeterson.png" alt="third" style="width:100%;">
+                    <img src="~/Images/Recently AddedMichaelPeterson.png" alt="third">
                 </div>
             </div>
 
@@ -46,11 +47,7 @@
             </a>
         </div>
  </div>
-<style type="text/css">
-    body {
-        color: white;
-    }
-</style>
+
 
 
     

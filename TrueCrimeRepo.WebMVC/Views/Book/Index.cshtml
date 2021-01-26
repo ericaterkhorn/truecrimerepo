@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<img src="~/Images/Books.png" style="width: 100%" />
+<img src="~/Images/Books.png">
 @*<h2>True Crime Books</h2>*@
 <h3>Find all of our books listed below. </h3>
 <b/>
@@ -22,8 +22,8 @@
     @TempData["SaveResult"]
 </div>
 }
-<table class="table table-hover">
-    <tr style="background-color: darkslategray">
+<table class="table">
+    <tr>
         @*<th>
                 @Html.DisplayNameFor(model => model.BookID)
             </th>*@
@@ -39,12 +39,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Title)   <i class="fas fa-book"></i>
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BookAuthor)
-        </th>
+        </th>*@
         @*<th>
                 @Html.DisplayNameFor(model => model.CreatedUtc)
             </th>
@@ -74,12 +74,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title) 
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BookAuthor)
-            </td>
+            </td>*@
             @*<td>
                     @Html.DisplayFor(modelItem => item.CreatedUtc)
                 </td>
@@ -96,17 +96,3 @@
     }
 
 </table>
-
-
-        <style type="text/css">
-            td {
-                width: 100px;
-            }
-
-            th {
-                width: 100px;
-            }
-            body{
-                color: white;
-            }
-        </style>

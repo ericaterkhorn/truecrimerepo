@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: white;
 }
 /**/
 .jumbotron{
@@ -12,13 +13,75 @@
     display: inline-block;
 }
 
+
 .container {
    /* display: inline;*/
+   
 }
 
+tr{
+    background-color: darkslategrey;
+    color: white;
+}
+
+
+th{
+    font-size: large;
+    width: 100px;
+}
+
+td{
+    width: 100px;
+}
+
+/*tr:hover{
+    color: darkgray;
+}*/
 .panel-title{
     font-size: x-large;
 }
+
+img{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Arial;
+    color: white;
+
+}
+
+.form-group-lg{
+    padding-bottom: 3px;
+    white-space: normal;
+}
+
+p{
+    font-size: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+    width: 100px;
+    padding-bottom: 10px;
+}
+
+.dl-horizontal dd {
+    white-space: normal;
+    width:150px;
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+.enumdropdownlistfor{
+    color: black;
+}
+
 /*.dropdownlistfor{
     color: black;
 }*/
@@ -41,24 +104,12 @@
 }*/
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.form-group-lg{
-    padding-bottom: 3px;
-    white-space: normal;
-}
 
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-/*.dl-horizontal dt {
-    white-space: normal;
-    padding-bottom: 4px;
-}*/
+
 
 
 /* Set width on the form input elements since they're 100% wide by default */

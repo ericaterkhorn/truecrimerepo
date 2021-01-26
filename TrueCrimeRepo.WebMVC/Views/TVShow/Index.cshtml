@@ -4,9 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<img src="~/Images/TV.png" style="width: 100%" />
+<img src="~/Images/TV.png"/>
 @*<h2>True Crime TV Shows/Documentaries</h2>*@
 <h3>Find all of our tv shows and documentaries listed below. </h3>
+<b/>
 <b/>
 <p>
     <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> ADD a tv show to a true crime</a>
@@ -22,8 +23,8 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table table-hover">
-    <tr style="background-color: darkslategray">
+<table class="table">
+    <tr>
         @*<th>
                 @Html.DisplayNameFor(model => model.TVShowID)
             </th>*@
@@ -33,12 +34,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Title) <i class="fas fa-tv"></i>
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Channel_OnlineStream)
-        </th>
+        </th>*@
         <th class="col-md-3">
             To view details, edit, or delete, please click below.
         </th>
@@ -56,12 +57,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Channel_OnlineStream)
-            </td>
+            </td>*@
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.TVShowID }, new { @class = "btn btn-default" })
                 @Html.ActionLink("Edit", "Edit", new { id = item.TVShowID }, new { @class = "btn btn-default" })
@@ -71,15 +72,4 @@
     }
 
 </table>
-        <style type="text/css">
-            td {
-                width: 100px;
-            }
-
-            th {
-                width: 100px;
-            }
-            body{
-                color: white;
-            }
-        </style>
+        

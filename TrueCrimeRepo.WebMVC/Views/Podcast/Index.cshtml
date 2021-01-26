@@ -3,11 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-<img src="~/Images/Podcasts.png" style="width: 100%" />
+<img src="~/Images/Podcasts.png"/>
 @*<h2>True Crime Podcasts</h2>*@
 <h3>Find all of our podcasts listed below. </h3>
 <br />
-<p style="font-size: 30px">
+<p>
     <a href='@Url.Action("Create")' class="btn btn-success"><i class="fas fa-plus"></i> &nbsp; ADD a new podcast to a true crime</a>
     @*@Html.ActionLink("Add a new true crime", "Create")*@
 </p>
@@ -23,8 +23,8 @@
     </div>
 }
 
-<table class="table table-hover">
-    <tr style="background-color: darkslategray">
+<table class="table">
+    <tr>
         @*<th>
                 @Html.DisplayNameFor(model => model.PodcastID)
             </th>*@
@@ -40,12 +40,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Title) &nbsp;<i class="fas fa-podcast"></i>
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.WebsiteUrl)
-        </th>
+        </th>*@
         @*<th>
                 @Html.DisplayNameFor(model => model.CreatedUtc)
             </th>
@@ -78,12 +78,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.WebsiteUrl)
-            </td>
+            </td>*@
             @*<td>
                     @Html.DisplayFor(modelItem => item.CreatedUtc)
                 </td>
@@ -102,17 +102,3 @@
     }
 
 </table>
-<style type="text/css">
-    td {
-        width: 100px;
-        font: white;
-    }
-
-    th {
-        width: 100px;
-    }
-
-    body {
-        color: white;
-    }
-</style>
