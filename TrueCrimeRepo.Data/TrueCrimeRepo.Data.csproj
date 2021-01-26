@@ -82,6 +82,10 @@
     <Compile Include="Migrations\202101190114573_remove foreign key perpetrator.Designer.cs">
       <DependentUpon>202101190114573_remove foreign key perpetrator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101260346520_podcast episdoe title.cs" />
+    <Compile Include="Migrations\202101260346520_podcast episdoe title.Designer.cs">
+      <DependentUpon>202101260346520_podcast episdoe title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Perpetrator.cs" />
     <Compile Include="Podcast.cs" />
@@ -95,6 +99,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101190114573_remove foreign key perpetrator.resx">
       <DependentUpon>202101190114573_remove foreign key perpetrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101260346520_podcast episdoe title.resx">
+      <DependentUpon>202101260346520_podcast episdoe title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -31,8 +31,12 @@ namespace TrueCrimeRepo.Data
         [Display(Name = "Name of Podcast")]
         public string Title { get; set; }
 
+        [Required]
+        [Display(Name ="Title of Podcast Episode")]
+        public string PodcastEpisodeTitle { get; set; }
+
         [MinLength(4, ErrorMessage = "Please provide a minimum one sentence description of the podcast.")]
-        [MaxLength(300, ErrorMessage = "Please limit your description to no more than 300 characters.")]
+        [MaxLength(600, ErrorMessage = "Please limit your description to no more than 600 characters.")]
         [Display(Name = "Description of the podcast")]
         public string Description { get; set; }
         

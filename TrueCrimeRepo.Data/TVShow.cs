@@ -29,7 +29,7 @@ namespace TrueCrimeRepo.Data
         public string Title { get; set; }
 
         [MinLength(4, ErrorMessage = "Please provide a minimum one sentence description of the show.")]
-        [MaxLength(300, ErrorMessage = "Please limit your description to no more than 300 characters.")]
+        [MaxLength(600, ErrorMessage = "Please limit your description to no more than 600 characters.")]
         [Display(Name = "Description of the TV Show or Documentary")]
         public string Description { get; set; }
 

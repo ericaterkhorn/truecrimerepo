@@ -26,6 +26,9 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Name of Podcast")]
         public string Title { get; set; }
 
+        [Display(Name = "Title of Podcast Episode")]
+        public string PodcastEpisodeTitle { get; set; }
+
         [Display(Name = "Description of podcast")]
         public string Description { get; set; }
 

@@ -26,20 +26,24 @@
 <table class="table">
     <tr>
         @*<th>
-                @Html.DisplayNameFor(model => model.PodcastID)
-            </th>*@
+            @Html.DisplayNameFor(model => model.PodcastID)
+        </th>*@
         @*<th>
-                @Html.DisplayNameFor(model => model.ApplicationUser)
-            </th>*@
+            @Html.DisplayNameFor(model => model.ApplicationUser)
+        </th>*@
         @*<th>
-                @Html.DisplayNameFor(model => model.CrimeID)
-            </th>*@
+            @Html.DisplayNameFor(model => model.CrimeID)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title) &nbsp;<i class="fas fa-podcast"></i>
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PodcastEpisodeTitle) 
+        </th>
+
         @*<th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
@@ -47,11 +51,11 @@
             @Html.DisplayNameFor(model => model.WebsiteUrl)
         </th>*@
         @*<th>
-                @Html.DisplayNameFor(model => model.CreatedUtc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedUtc)
-            </th>*@
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </th>*@
 
         <th class="col-md-3">
             To view details, edit, or delete, please click below.
@@ -77,6 +81,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PodcastEpisodeTitle)
             </td>
             @*<td>
                 @Html.DisplayFor(modelItem => item.Description)

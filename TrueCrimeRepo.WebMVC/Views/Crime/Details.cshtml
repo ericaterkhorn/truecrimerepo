@@ -39,8 +39,7 @@
     <div class="panel-body">
         @foreach (var podcast in Model.Podcasts.OrderBy(Model => Model.Title))
         {
-            @Html.DisplayFor(model => podcast.Title) <b>:</b><i> @Html.DisplayFor(model => podcast.WebsiteUrl)</i>
-            @*@Html.DisplayFor(model => podcast.WebsiteUrl)*@
+            @Html.DisplayFor(model => podcast.Title) <b>:</b> @Html.DisplayFor(model => podcast.PodcastEpisodeTitle)<b></b><b></b> <i> @Html.DisplayFor(model => podcast.WebsiteUrl)</i>
             <br />
             <br />
         }
@@ -179,22 +178,7 @@
         @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
-    <style type="text/css">
-        td {
-            width: 100px;
-        }
 
-        th {
-            width: 100px;
-        }
-        body{
-            color: white;
-            font-size: medium;
-        }
-        .panel-title{
-            font-size: x-large;
-        }
-    </style>
 
 
 

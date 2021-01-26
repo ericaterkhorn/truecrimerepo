@@ -27,6 +27,7 @@ namespace TrueCrimeRepo.Services
                     CrimeID = model.CrimeID,
                     Crime = model.Crime,
                     Title = model.Title,
+                    PodcastEpisodeTitle = model.PodcastEpisodeTitle,
                     Description = model.Description,
                     WebsiteUrl = model.WebsiteUrl,
                     CreatedUtc = DateTimeOffset.Now
@@ -55,6 +56,7 @@ namespace TrueCrimeRepo.Services
                                     CrimeID = e.CrimeID,
                                     Crime = e.Crime, 
                                     Title = e.Title,
+                                    PodcastEpisodeTitle = e.PodcastEpisodeTitle,
                                     Description = e.Description,
                                     WebsiteUrl = e.WebsiteUrl,
                                 }
@@ -79,6 +81,7 @@ namespace TrueCrimeRepo.Services
                         CrimeID = entity.CrimeID,
                         Crime = entity.Crime,
                         Title = entity.Title,
+                        PodcastEpisodeTitle = entity.PodcastEpisodeTitle,
                         Description = entity.Description,
                         WebsiteUrl = entity.WebsiteUrl,
                         CreatedUtc = entity.CreatedUtc,
@@ -97,6 +100,7 @@ namespace TrueCrimeRepo.Services
                         .Single(e => e.PodcastID == model.PodcastID); /*&& e.UserId == _userID);*/
 
                 entity.Title = model.Title;
+                entity.PodcastEpisodeTitle = model.PodcastEpisodeTitle;
                 entity.Description = model.Description;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 

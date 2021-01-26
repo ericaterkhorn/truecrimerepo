@@ -212,6 +212,7 @@
     <Content Include="Images\Podcastcarousel.png" />
     <Content Include="Images\Podcasts.png" />
     <Content Include="Images\Recently AddedMichaelPeterson.png" />
+    <Content Include="Images\True Crime Repo.png" />
     <Content Include="Images\TV.png" />
     <Content Include="Images\updatedhomepageimage.png" />
     <Content Include="Scripts\bootstrap.js" />
