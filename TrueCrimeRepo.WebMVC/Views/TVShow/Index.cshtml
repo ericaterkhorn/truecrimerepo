@@ -25,8 +25,8 @@
 <table class="table">
     <tr>
         @*<th>
-                @Html.DisplayNameFor(model => model.TVShowID)
-            </th>*@
+            @Html.DisplayNameFor(model => model.TVShowID)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </th>
@@ -46,7 +46,7 @@
 
     @foreach (var item in Model.OrderBy(Model => Model.Crime.Title))
     {
-        <tr style="background-color: dimgrey">
+        <tr style="background-color: lightgray">
             @*<td>
                     @Html.DisplayFor(modelItem => item.TVShowID)
                 </td>*@

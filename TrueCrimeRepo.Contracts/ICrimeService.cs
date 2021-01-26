@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TrueCrimeRepo.Contracts
 {
-    class ICrimeService
+    //An interface is a type that defines a contract between an object and the interface
+    public interface ICrimeService
     {
+        //properties
+        //method signatures
+        //bool CreateCrime(CrimeCreateItem crimeToCreate);
+
     }
 }

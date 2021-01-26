@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    color: white;
+    
 }
 /**/
 .jumbotron{
@@ -19,9 +19,9 @@
    
 }
 
-tr{
-    background-color: darkslategrey;
-    color: white;
+tr {
+    background-color: #9fa2a6;
+    color: black;
 }
 
 
@@ -30,19 +30,18 @@ th{
     width: 100px;
 }
 
-td{
-    width: 100px;
-}
-
 /*tr:hover{
     color: darkgray;
 }*/
 .panel-title{
     font-size: x-large;
+    color: white;
 }
 
 .panel-body{
     font-size: medium;
+    background-color: lightgray;
+    color: black;
 }
 
 img{
@@ -88,6 +87,15 @@ p{
 
 .enumdropdownlistfor{
     color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: firebrick;
 }
 
 /*.dropdownlistfor{
