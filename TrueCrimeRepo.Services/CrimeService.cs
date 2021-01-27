@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Contracts;
 using TrueCrimeRepo.Data;
 using TrueCrimeRepo.Models;
 
 namespace TrueCrimeRepo.Services
 {
-    public class CrimeService
+    public class CrimeService : ICrimeService
     {
         private readonly string _userID;
         //private ApplicationUser _user;
@@ -130,6 +131,8 @@ namespace TrueCrimeRepo.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-
     }
+
 }
+
+        

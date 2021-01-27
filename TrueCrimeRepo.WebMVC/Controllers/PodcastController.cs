@@ -84,6 +84,7 @@ namespace TrueCrimeRepo.WebMVC.Controllers
                 {
                     PodcastID = detail.PodcastID,
                     Title = detail.Title,
+                    PodcastEpisodeTitle = detail.PodcastEpisodeTitle,
                     Description = detail.Description,
                     WebsiteUrl = detail.WebsiteUrl
                 };

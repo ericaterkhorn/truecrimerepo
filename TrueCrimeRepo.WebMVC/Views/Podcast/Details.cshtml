@@ -19,7 +19,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Crime.Title)
         </dt>
-        <dd>
+        <dd style="color: white;">
             @*@Html.DisplayFor(model => model.Crime.Title)*@
 
             <a href="@Url.Action("Details", "Crime", new { id = Model.CrimeID })">@Html.DisplayFor(modelItem => Model.Crime.Title)</a>
@@ -87,18 +87,4 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.PodcastID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-<style type="text/css">
-    td {
-        width: 100px;
-        font: white;
-    }
 
-    th {
-        width: 100px;
-        font: white;
-    }
-
-    body {
-        color: white;
-    }
-</style>

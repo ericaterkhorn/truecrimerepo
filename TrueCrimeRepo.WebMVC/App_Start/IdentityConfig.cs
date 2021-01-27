@@ -55,7 +55,7 @@ namespace TrueCrimeRepo.WebMVC
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = false,
+                RequireNonLetterOrDigit = true,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,

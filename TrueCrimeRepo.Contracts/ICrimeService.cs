@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrueCrimeRepo.Models;
 
 namespace TrueCrimeRepo.Contracts
 {
@@ -11,7 +12,14 @@ namespace TrueCrimeRepo.Contracts
     {
         //properties
         //method signatures
-        //bool CreateCrime(CrimeCreateItem crimeToCreate);
+        
+        bool CreateCrime(CrimeCreate model);
+        IEnumerable<CrimeListItem> GetCrimes();
+        bool DeleteCrime(int crimeID);
+        CrimeDetail GetCrimeById(int id);
+        bool UpdateCrime(CrimeEdit model);
+        
+
 
     }
 }

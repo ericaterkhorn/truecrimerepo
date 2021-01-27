@@ -2,16 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 <div class="jumbotron2">
-    <div class="container">
+    <div class="container-fluid">
+        <br />
+        <a href="Crime"><img src="~/Images/True Crime Repo.png" /></a>
+        <br />
         <br/>
-        <br/>
-        <a href="Crime"><img src="~/Images/True Crime Repo.png"/></a>
+            <a href='@Url.Action("Login", "Account")' class="btn btn-danger" style="display: block;">To view crimes and media, please register for an account or login.</a>
     </div>
     <br/>
-    <div align="center">
-        <a href='@Url.Action("Login", "Account")' class="btn btn-danger"><h4>To view crimes and associated media, please register for an account or login.</h4></a>
+    @*<div class="container-fluid">
+        <div align="center">
+            <a href='@Url.Action("Login", "Account")' class="btn btn-danger"><h4>To view crimes and associated media, please register for an account or login.</h4></a>
+        </div>
     </div>
-    <br/>
+    <br/>*@
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->

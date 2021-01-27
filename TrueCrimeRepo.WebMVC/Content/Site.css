@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    
+    background-color: #696969;
 }
 /**/
 .jumbotron{
@@ -10,7 +10,7 @@
 }
 
 .jumbotron2 {
-    display: inline-block;
+    display: inline;
 }
 
 
@@ -18,6 +18,10 @@
   background-size: cover;
    
 }
+
+/*.container3{
+    background-color: lightgray;
+}*/
 
 tr {
     background-color: #9fa2a6;
@@ -64,25 +68,30 @@ img{
     white-space: normal;
 }
 
-p{
+.p{
     font-size: 15px;
+       color: white;
 }
 
 .form-horizontal{
     font-size: medium;
 }
 
+.dl-horizontal{
+    white-space: normal;
+    width: 700px;
+    
+}
+
 .dl-horizontal dt {
     white-space: normal;
-    width: 100px;
     padding-bottom: 10px;
 }
 
 .dl-horizontal dd {
-    white-space: normal;
-    width:150px;
-    padding-bottom: 10px;
+    width: 500px;
     font-style: italic;
+    padding-bottom: 10px;
 }
 
 .enumdropdownlistfor{
@@ -97,6 +106,13 @@ a {
 a:hover {
     color: firebrick;
 }
+
+
+.dd{
+    color: white;
+}
+
+
 
 /*.dropdownlistfor{
     color: black;

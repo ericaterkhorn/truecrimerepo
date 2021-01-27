@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<img src="~/Images/crimedetails.png" style="width:100%" />
+<img src="~/Images/crimedetails.png"/>
 <br/>
 <br/>
 <div class="panel panel-default">
@@ -76,8 +76,7 @@
         </div>
     </div>
     <div>
-        <h4></h4>
-        <hr />
+
         @*<dl class="form-group-lg">*@
         @*<dt>
                 @Html.DisplayNameFor(model => model.CrimeID)
@@ -174,10 +173,12 @@
                 </dd>
             </dl>*@
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+    <div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.CrimeID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
 
 
 

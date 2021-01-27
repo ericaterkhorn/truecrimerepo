@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using TrueCrimeRepo.Contracts;
 using TrueCrimeRepo.Data;
 using TrueCrimeRepo.Models;
 using TrueCrimeRepo.Services;
@@ -16,6 +17,13 @@ namespace TrueCrimeRepo.WebMVC.Controllers
     public class CrimeController : Controller
     {
         //private ApplicationDbContext _db = new ApplicationDbContext();
+        //private readonly ICrimeService _crimeService;
+
+        //public CrimeController(ICrimeService crimeService)
+        //{
+        //    _crimeService = crimeService;
+        //}
+
         //GET: Crime
         public ActionResult Index()
         {
@@ -38,7 +46,6 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         //    {
         //        crimes = crimes.Where(s => s.Title.Contains(searchString));
         //    }
-
         //    return View(_db.Crimes.ToString());
     
         //public ActionResult Index(string Sorting_Order)
@@ -53,11 +60,9 @@ namespace TrueCrimeRepo.WebMVC.Controllers
         //        case "Title":
         //            crimes = crimes.OrderByDescending(crime => crime.Title);
         //            break;
-
         //    }
         //    return View(crimes.ToList());
         //}
-
 
         public ActionResult Create()
         {
