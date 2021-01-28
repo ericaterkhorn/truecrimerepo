@@ -23,6 +23,8 @@ namespace TrueCrimeRepo.Models
         [Display(Name = "Enter a description of the true crime")]
         public string Description { get; set; }
         
+        //public string UserID { get; set; }
+
         //[Required]
         //public DateTime Year { get; set; }
 

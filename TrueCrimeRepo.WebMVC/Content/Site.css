@@ -19,9 +19,9 @@
    
 }
 
-/*.container3{
-    background-color: lightgray;
-}*/
+.form-group{
+    width: 100%;
+}
 
 tr {
     background-color: #9fa2a6;

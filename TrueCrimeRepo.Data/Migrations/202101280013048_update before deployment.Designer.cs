@@ -7,13 +7,13 @@ namespace TrueCrimeRepo.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class podcastepisdoetitle : IMigrationMetadata
+    public sealed partial class updatebeforedeployment : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(podcastepisdoetitle));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updatebeforedeployment));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101260346520_podcast episdoe title"; }
+            get { return "202101280013048_update before deployment"; }
         }
         
         string IMigrationMetadata.Source

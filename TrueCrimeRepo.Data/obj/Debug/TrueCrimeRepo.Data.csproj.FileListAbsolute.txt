@@ -22,14 +22,10 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.Raz
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Web.WebPages.Razor.xml
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csprojAssemblyReference.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.pdb
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.removeforeignkeyperpetrator.resources
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache
-C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.podcastepisdoetitle.resources
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\Autofac.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\Autofac.Integration.Mvc.dll
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -50,3 +46,5 @@ C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Memory.
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Numerics.Vectors.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.Migrations.updatebeforedeployment.resources
+C:\ElevenFiftyProjects\TrueCrimeRepo\TrueCrimeRepo.Data\obj\Debug\TrueCrimeRepo.Data.csproj.GenerateResource.cache

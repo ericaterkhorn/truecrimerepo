@@ -11,6 +11,8 @@ namespace TrueCrimeRepo.Services
 {
     public class CrimeService : ICrimeService
     {
+        // Put UserId in all the models
+
         private readonly string _userID;
         //private ApplicationUser _user;
 
@@ -132,7 +134,6 @@ namespace TrueCrimeRepo.Services
             }
         }
     }
-
 }
 
         

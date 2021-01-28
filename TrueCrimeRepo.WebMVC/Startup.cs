@@ -14,28 +14,22 @@ namespace TrueCrimeRepo.WebMVC
     {
         public void Configuration(IAppBuilder app)
         {
+
+            //var builder = new ContainerBuilder();
+            //builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            //// OPTIONAL: Register web abstractions like HttpContextBase.
+
+            //builder.RegisterModule<AutofacWebTypesModule>();
+            //builder.RegisterType<CrimeService>().As<ICrimeService>();
+
+            //// Set the dependency resolver to be Autofac.
+            //var container = builder.Build();
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
             ConfigureAuth(app);
-        }
     
-        
-        //var builder = new ContainerBuilder();
-        //builder.RegisterControllers(typeof(MvcApplication).Assembly);
-        //// OPTIONAL: Register web abstractions like HttpContextBase.
+        }
 
-        //builder.RegisterModule<AutofacWebTypesModule>();
-        //builder.RegisterType<CrimeService>().As<ICrimeService>();
-
-        //// Set the dependency resolver to be Autofac.
-        //var container = builder.Build();
-        //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
-        //Configuration(app);
-        //CreateAdmin();
     }
 
-        //private void CreateAdmin()
-        //{
-        //    throw new NotImplementedException();
-        //}
-    
 }
